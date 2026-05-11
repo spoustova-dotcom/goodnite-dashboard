@@ -77,6 +77,10 @@ main{max-width:1200px;margin:0 auto;padding:2.5rem 2.5rem 0}
 .issue-tag{font-size:0.72rem;padding:3px 9px;border-radius:20px;border:1px solid var(--border);color:var(--muted)}
 .issue-tag.highlight{border-color:rgba(224,112,112,0.4);color:var(--danger);background:rgba(224,112,112,0.07)}
 .no-issues{font-size:0.78rem;color:var(--ok)}
+.issues-history{display:flex;flex-direction:column;gap:10px;margin-bottom:1rem}
+.issues-history-row{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.75rem 1.25rem;display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap}
+.issues-history-date{font-size:0.75rem;color:var(--muted);min-width:60px;padding-top:2px}
+.issues-history-tags{display:flex;flex-wrap:wrap;gap:5px;flex:1}
 
 /* Category bar chart */
 .cat-bars{display:flex;flex-direction:column;gap:10px;max-width:600px}
@@ -141,10 +145,15 @@ footer{max-width:1200px;margin:3rem auto 0;padding:1.25rem 2.5rem 0;border-top:1
     <div class="tab-panel" id="tab-issues">
       <div class="section-header"><span class="section-title">Problémy zachycené v recenzích</span><span class="section-sub">analýza textu pomocí AI</span></div>
       <div style="margin-bottom:1.5rem">
-        <div class="section-title" style="font-size:0.9rem;margin-bottom:0.75rem">Nejčastější kategorie problémů</div>
+        <div class="section-title" style="font-size:0.9rem;margin-bottom:0.75rem">Nejčastější kategorie problémů (aktuální)</div>
         <div class="cat-bars" id="cat-bars"></div>
       </div>
-      <div class="section-title" style="font-size:0.9rem;margin-bottom:0.75rem">Detail podle apartmánu</div>
+      <div class="section-header" style="margin-top:1.5rem">
+        <span class="section-title" style="font-size:0.9rem">Vývoj problémů v čase</span>
+        <span class="section-sub">porovnání snapshots</span>
+      </div>
+      <div class="issues-history" id="issues-history"></div>
+      <div class="section-title" style="font-size:0.9rem;margin-bottom:0.75rem;margin-top:1.5rem">Detail aktuálního stavu</div>
       <div class="issues-grid" id="issues-grid"></div>
     </div>
 
@@ -299,6 +308,22 @@ function render(data){
     </div>`).join('')||(
     '<div style="font-size:0.82rem;color:var(--muted)">Data o problémech budou dostupná po příštím spuštění scraperu.</div>'
   );
+
+  // Issues history – show per-snapshot which issues appeared
+  const issuesHistory = historyData.filter(s => s.apartments && s.apartments.some(a => a.review_issues && a.review_issues.length > 0));
+  if(issuesHistory.length === 0){
+    document.getElementById('issues-history').innerHTML='<div style="font-size:0.82rem;color:var(--muted)">Historická data o problémech budou dostupná po příštím spuštění scraperu s API kreditem.</div>';
+  } else {
+    document.getElementById('issues-history').innerHTML = issuesHistory.map(snap => {
+      const allIssues = [];
+      snap.apartments.forEach(a => { if(a.review_issues) a.review_issues.forEach(i => allIssues.push({apt: a.name, issue: i})); });
+      if(!allIssues.length) return '';
+      return `<div class="issues-history-row">
+        <span class="issues-history-date">${fmtShort(snap.scraped_at)}</span>
+        <div class="issues-history-tags">${allIssues.map(x=>`<span class="issue-tag highlight" title="${x.apt}">${x.issue}</span>`).join('')}</div>
+      </div>`;
+    }).filter(Boolean).join('');
+  }
 
   document.getElementById('issues-grid').innerHTML=sorted.map(a=>{
     const hasIssues=a.review_issues&&a.review_issues.length>0;
