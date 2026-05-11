@@ -230,6 +230,10 @@ def main():
             except: pass
 
     history = existing.get("history", [])
+
+    # Avoid duplicate snapshot for the same date – keep only latest run per day
+    today = now[:10]
+    history = [s for s in history if s["scraped_at"][:10] != today]
     history.append({
         "scraped_at": now,
         "apartments": [{
