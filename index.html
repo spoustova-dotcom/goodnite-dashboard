@@ -458,18 +458,20 @@ function render(data){
   }
 
   // METRICS
-  const avgDelta=historyData.length>=2?()=>{
+  let avgDelta=null;
+  if(historyData.length>=2){
     const prev=historyData[historyData.length-2];
     const prevScored=prev.apartments.filter(a=>a.score);
-    if(!prevScored.length)return null;
-    const prevAvg=prevScored.reduce((s,a)=>s+a.score,0)/prevScored.length;
-    return avg-prevAvg;
-  }():null;
+    if(prevScored.length){
+      const prevAvg=prevScored.reduce((s,a)=>s+a.score,0)/prevScored.length;
+      avgDelta=avg-prevAvg;
+    }
+  }
 
   document.getElementById('metrics').innerHTML=`
     <div class="metric"><div class="metric-label">Apartmánů</div><div class="metric-value">${apts.length}</div><div class="metric-sub">sledovaných</div></div>
-    <div class="metric"><div class="metric-label">Průměr Booking</div><div class="metric-value ${avg>=8.5?'ok':'danger'}">${avg?avg.toFixed(1):'—'}</div><div class="metric-delta">${avgDelta!==null?deltaHtml(avgDelta):''}</div></div>
-    <div class="metric"><div class="metric-label">Průměr čistota</div><div class="metric-value ${avgClean>=8.5?'ok':'danger'}">${avgClean?avgClean.toFixed(1):'—'}</div><div class="metric-sub">z 10</div></div>
+    <div class="metric"><div class="metric-label">Průměr Booking</div><div class="metric-value ${avg&&avg>=8.5?'ok':'danger'}">${avg?avg.toFixed(1):'—'}</div><div class="metric-delta">${avgDelta!==null?deltaHtml(avgDelta):''}</div></div>
+    <div class="metric"><div class="metric-label">Průměr čistota</div><div class="metric-value ${avgClean&&avgClean>=8.5?'ok':'danger'}">${avgClean?avgClean.toFixed(1):'—'}</div><div class="metric-sub">z 10</div></div>
     <div class="metric"><div class="metric-label">Pozornost</div><div class="metric-value ${alerts.length>0?'danger':'ok'}">${alerts.length}</div><div class="metric-sub">pod 8.5</div></div>
     <div class="metric"><div class="metric-label">Recenzí celkem</div><div class="metric-value accent" style="font-size:1.5rem">${totalReviews>0?totalReviews.toLocaleString('cs-CZ'):'—'}</div><div class="metric-sub">na Booking</div></div>
   `;
