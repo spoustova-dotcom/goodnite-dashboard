@@ -318,7 +318,12 @@ function badgeText(s){if(!s)return'N/A';if(s>=9)return'Výborné';if(s>=8.5)retu
 function fmt(v){return(v===null||v===undefined)?'—':Number(v).toFixed(1)}
 function fmtDate(iso){return new Date(iso).toLocaleDateString('cs-CZ',{day:'numeric',month:'long',year:'numeric'})}
 function fmtShort(iso){const d=new Date(iso);return d.getDate()+'.'+(d.getMonth()+1)+'.'}
-function fmtMonth(ym){if(!ym)return'?';const[y,m]=ym.split('-');return(CZ_MONTHS_LABELS[parseInt(m)]||m)+' '+y}
+function fmtMonth(ym){
+  if(!ym)return'?';
+  var parts=ym.split('-');
+  var y=parts[0],m=parts[1];
+  return(CZ_MONTHS_LABELS[parseInt(m,10)]||m)+' '+y;
+}
 function nextMonday(){const d=new Date();const day=d.getDay();const diff=(day===1)?7:(8-day)%7||7;d.setDate(d.getDate()+diff);return d.toLocaleDateString('cs-CZ',{day:'numeric',month:'long'})}
 
 function switchTab(name,btn){
@@ -397,7 +402,16 @@ function renderArchive(){
         </span>
       </div>
       <div class="month-reviews">
-        ${reviews.map(t=>`<div class="review-text">${t}</div>`).join('')}
+        ${reviews.map(r=>{
+          const neg = typeof r === 'object' ? r.negative : r;
+          const pos = typeof r === 'object' ? r.positive : null;
+          const score = typeof r === 'object' ? r.score : null;
+          return `<div class="review-text">
+            ${score ? `<span style="font-size:0.7rem;color:var(--accent);margin-right:6px">${score}/10</span>` : ''}
+            ${neg ? `<span style="color:var(--danger)">☹ ${neg}</span>` : ''}
+            ${pos && !neg ? `<span style="color:var(--ok)">☺ ${pos}</span>` : ''}
+          </div>`;
+        }).join('')}
       </div>
     </div>`;
   }).join('');
