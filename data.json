@@ -1,36 +1,44 @@
 {
-  "scraped_at": "2026-05-11T08:02:25.718842Z",
+  "scraped_at": "2026-05-07T06:00:00Z",
   "apartments": [
+    {
+      "name": "Sky Apartments Vlhká",
+      "url": "https://www.booking.com/hotel/cz/modern-panorama-residence.cs.html",
+      "score": 8.1,
+      "score_cleanliness": 8.2,
+      "review_count": null,
+      "error": null
+    },
     {
       "name": "Enjoy Downtown 12 (SB12)",
       "url": "https://www.booking.com/hotel/cz/enjoy-downtown-boutique-apartments-12-by-goodnite-cz.cs.html",
       "score": 8.7,
-      "score_cleanliness": 3.1,
-      "review_count": 304,
+      "score_cleanliness": 9.0,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Enjoy Downtown 13 (SB13)",
       "url": "https://www.booking.com/hotel/cz/enjoy-downtown-apartments.cs.html",
       "score": 9.3,
-      "score_cleanliness": 3.1,
-      "review_count": 534,
+      "score_cleanliness": 9.6,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Enjoy Downtown – Zelný trh",
       "url": "https://www.booking.com/hotel/cz/apartments-zelny-trh-brno.cs.html",
       "score": 9.2,
-      "score_cleanliness": 2.9,
-      "review_count": 701,
+      "score_cleanliness": 9.4,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Prezidentský mezonet",
       "url": "https://www.booking.com/hotel/cz/president-mezonet-apartment-brno.cs.html",
       "score": 8.8,
-      "score_cleanliness": 3.1,
-      "review_count": 357,
+      "score_cleanliness": 9.1,
+      "review_count": null,
       "error": null
     },
     {
@@ -38,23 +46,23 @@
       "url": "https://www.booking.com/hotel/cz/coco-chanel-boutique-apartment.cs.html",
       "score": 9.3,
       "score_cleanliness": 9.5,
-      "review_count": 169,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Panorama Apartment",
       "url": "https://www.booking.com/hotel/cz/panorama-apartment-by-goodnite-cz.cs.html",
       "score": 10.0,
-      "score_cleanliness": 2.9,
-      "review_count": 3,
+      "score_cleanliness": 10.0,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Great Chill (Králova 11)",
       "url": "https://www.booking.com/hotel/cz/boutique-chill-apartments-br-no-11.cs.html",
-      "score": 8.7,
+      "score": 8.8,
       "score_cleanliness": 9.2,
-      "review_count": 461,
+      "review_count": null,
       "error": null
     },
     {
@@ -62,31 +70,31 @@
       "url": "https://www.booking.com/hotel/cz/boutique-city-apartments-br-no-47.cs.html",
       "score": 8.3,
       "score_cleanliness": 8.8,
-      "review_count": 348,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Old Town Špilberk",
       "url": "https://www.booking.com/hotel/cz/old-town-apartment-spilberk.cs.html",
       "score": 8.3,
-      "score_cleanliness": 8.7,
-      "review_count": 142,
+      "score_cleanliness": 8.6,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Expo Living 33",
       "url": "https://www.booking.com/hotel/cz/expo-living-33.cs.html",
       "score": 8.7,
-      "score_cleanliness": 3.1,
-      "review_count": 1412,
+      "score_cleanliness": 9.1,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Expo Dream Veletržní",
       "url": "https://www.booking.com/hotel/cz/veletrzni-boutique-apartments.cs.html",
       "score": 7.9,
-      "score_cleanliness": 3.1,
-      "review_count": 678,
+      "score_cleanliness": 8.6,
+      "review_count": null,
       "error": null
     },
     {
@@ -94,32 +102,401 @@
       "url": "https://www.booking.com/hotel/cz/botanica-by-goodnite-cz.cs.html",
       "score": 9.0,
       "score_cleanliness": 9.4,
-      "review_count": 656,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Riverside by Goodnite",
       "url": "https://www.booking.com/hotel/cz/riverside-by-goodnite.cs.html",
       "score": 8.6,
-      "score_cleanliness": 3.1,
-      "review_count": 1134,
+      "score_cleanliness": 9.1,
+      "review_count": null,
       "error": null
     },
     {
       "name": "Penzion u Libušky",
       "url": "https://www.booking.com/hotel/cz/penzion-u-libusky-29-brno-living-cz.cs.html",
       "score": 8.1,
-      "score_cleanliness": 3.1,
-      "review_count": 2060,
+      "score_cleanliness": 8.6,
+      "review_count": null,
       "error": null
+    }
+  ],
+  "history": [
+    {
+      "scraped_at": "2026-04-16T06:00:00Z",
+      "apartments": [
+        {
+          "name": "Enjoy Downtown 12 (SB12)",
+          "url": "https://www.booking.com/hotel/cz/enjoy-downtown-boutique-apartments-12-by-goodnite-cz.cs.html",
+          "score": 8.7,
+          "score_cleanliness": 9.0,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Enjoy Downtown 13 (SB13)",
+          "url": "https://www.booking.com/hotel/cz/enjoy-downtown-apartments.cs.html",
+          "score": 9.3,
+          "score_cleanliness": 9.6,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Old Town Špilberk",
+          "url": "https://www.booking.com/hotel/cz/old-town-apartment-spilberk.cs.html",
+          "score": 8.4,
+          "score_cleanliness": 9.0,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Prezidentský mezonet",
+          "url": "https://www.booking.com/hotel/cz/president-mezonet-apartment-brno.cs.html",
+          "score": 8.8,
+          "score_cleanliness": 9.1,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Enjoy Downtown – Zelný trh",
+          "url": "https://www.booking.com/hotel/cz/apartments-zelny-trh-brno.cs.html",
+          "score": 9.2,
+          "score_cleanliness": 9.5,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Coco Chanel Boutique",
+          "url": "https://www.booking.com/hotel/cz/coco-chanel-boutique-apartment.cs.html",
+          "score": 9.3,
+          "score_cleanliness": 9.5,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Orange Glow (Šilingrovo 47)",
+          "url": "https://www.booking.com/hotel/cz/boutique-city-apartments-br-no-47.cs.html",
+          "score": 8.3,
+          "score_cleanliness": 8.8,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Expo Living 33",
+          "url": "https://www.booking.com/hotel/cz/expo-living-33.cs.html",
+          "score": 8.7,
+          "score_cleanliness": 9.1,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Botanica by Goodnite",
+          "url": "https://www.booking.com/hotel/cz/botanica-by-goodnite-cz.cs.html",
+          "score": 9.0,
+          "score_cleanliness": 9.5,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Riverside by Goodnite",
+          "url": "https://www.booking.com/hotel/cz/riverside-by-goodnite.cs.html",
+          "score": 8.5,
+          "score_cleanliness": 9.0,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Penzion u Libušky",
+          "url": "https://www.booking.com/hotel/cz/penzion-u-libusky-29-brno-living-cz.cs.html",
+          "score": 8.0,
+          "score_cleanliness": 8.7,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Great Chill (Králova 11)",
+          "url": "https://www.booking.com/hotel/cz/boutique-chill-apartments-br-no-11.cs.html",
+          "score": 8.8,
+          "score_cleanliness": 9.2,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Expo Dream Veletržní",
+          "url": "https://www.booking.com/hotel/cz/veletrzni-boutique-apartments.cs.html",
+          "score": 7.9,
+          "score_cleanliness": 8.6,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Sky Apartments Vlhká",
+          "url": "https://www.booking.com/hotel/cz/modern-panorama-residence.cs.html",
+          "score": 10.0,
+          "score_cleanliness": 9.2,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Panorama Apartment",
+          "url": "https://www.booking.com/hotel/cz/panorama-apartment-by-goodnite-cz.cs.html",
+          "score": 10.0,
+          "score_cleanliness": 10.0,
+          "review_count": null,
+          "error": null
+        }
+      ]
     },
     {
-      "name": "Sky Apartments Vlhká",
-      "url": "https://www.booking.com/hotel/cz/modern-panorama-residence.cs.html",
-      "score": 8.1,
-      "score_cleanliness": 8.4,
-      "review_count": 8,
-      "error": null
+      "scraped_at": "2026-04-23T06:00:00Z",
+      "apartments": [
+        {
+          "name": "Enjoy Downtown 12 (SB12)",
+          "url": "https://www.booking.com/hotel/cz/enjoy-downtown-boutique-apartments-12-by-goodnite-cz.cs.html",
+          "score": 8.7,
+          "score_cleanliness": 9.0,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Enjoy Downtown 13 (SB13)",
+          "url": "https://www.booking.com/hotel/cz/enjoy-downtown-apartments.cs.html",
+          "score": 9.3,
+          "score_cleanliness": 9.6,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Enjoy Downtown – Zelný trh",
+          "url": "https://www.booking.com/hotel/cz/apartments-zelny-trh-brno.cs.html",
+          "score": 9.2,
+          "score_cleanliness": 9.4,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Prezidentský mezonet",
+          "url": "https://www.booking.com/hotel/cz/president-mezonet-apartment-brno.cs.html",
+          "score": 8.8,
+          "score_cleanliness": 9.1,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Coco Chanel Boutique",
+          "url": "https://www.booking.com/hotel/cz/coco-chanel-boutique-apartment.cs.html",
+          "score": 9.3,
+          "score_cleanliness": 9.5,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Panorama Apartment",
+          "url": "https://www.booking.com/hotel/cz/panorama-apartment-by-goodnite-cz.cs.html",
+          "score": 10.0,
+          "score_cleanliness": 10.0,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Great Chill (Králova 11)",
+          "url": "https://www.booking.com/hotel/cz/boutique-chill-apartments-br-no-11.cs.html",
+          "score": 8.8,
+          "score_cleanliness": 9.2,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Orange Glow (Šilingrovo 47)",
+          "url": "https://www.booking.com/hotel/cz/boutique-city-apartments-br-no-47.cs.html",
+          "score": 8.3,
+          "score_cleanliness": 8.8,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Old Town Špilberk",
+          "url": "https://www.booking.com/hotel/cz/old-town-apartment-spilberk.cs.html",
+          "score": 8.3,
+          "score_cleanliness": 8.7,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Expo Living 33",
+          "url": "https://www.booking.com/hotel/cz/expo-living-33.cs.html",
+          "score": 8.7,
+          "score_cleanliness": 9.1,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Expo Dream Veletržní",
+          "url": "https://www.booking.com/hotel/cz/veletrzni-boutique-apartments.cs.html",
+          "score": 7.8,
+          "score_cleanliness": 8.6,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Botanica by Goodnite",
+          "url": "https://www.booking.com/hotel/cz/botanica-by-goodnite-cz.cs.html",
+          "score": 9.0,
+          "score_cleanliness": 9.5,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Riverside by Goodnite",
+          "url": "https://www.booking.com/hotel/cz/riverside-by-goodnite.cs.html",
+          "score": 8.5,
+          "score_cleanliness": 9.0,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Penzion u Libušky",
+          "url": "https://www.booking.com/hotel/cz/penzion-u-libusky-29-brno-living-cz.cs.html",
+          "score": 8.1,
+          "score_cleanliness": 8.7,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Sky Apartments Vlhká",
+          "url": "https://www.booking.com/hotel/cz/modern-panorama-residence.cs.html",
+          "score": 10.0,
+          "score_cleanliness": 9.2,
+          "review_count": null,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scraped_at": "2026-05-07T06:00:00Z",
+      "apartments": [
+        {
+          "name": "Sky Apartments Vlhká",
+          "url": "https://www.booking.com/hotel/cz/modern-panorama-residence.cs.html",
+          "score": 8.1,
+          "score_cleanliness": 8.2,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Enjoy Downtown 12 (SB12)",
+          "url": "https://www.booking.com/hotel/cz/enjoy-downtown-boutique-apartments-12-by-goodnite-cz.cs.html",
+          "score": 8.7,
+          "score_cleanliness": 9.0,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Enjoy Downtown 13 (SB13)",
+          "url": "https://www.booking.com/hotel/cz/enjoy-downtown-apartments.cs.html",
+          "score": 9.3,
+          "score_cleanliness": 9.6,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Enjoy Downtown – Zelný trh",
+          "url": "https://www.booking.com/hotel/cz/apartments-zelny-trh-brno.cs.html",
+          "score": 9.2,
+          "score_cleanliness": 9.4,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Prezidentský mezonet",
+          "url": "https://www.booking.com/hotel/cz/president-mezonet-apartment-brno.cs.html",
+          "score": 8.8,
+          "score_cleanliness": 9.1,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Coco Chanel Boutique",
+          "url": "https://www.booking.com/hotel/cz/coco-chanel-boutique-apartment.cs.html",
+          "score": 9.3,
+          "score_cleanliness": 9.5,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Panorama Apartment",
+          "url": "https://www.booking.com/hotel/cz/panorama-apartment-by-goodnite-cz.cs.html",
+          "score": 10.0,
+          "score_cleanliness": 10.0,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Great Chill (Králova 11)",
+          "url": "https://www.booking.com/hotel/cz/boutique-chill-apartments-br-no-11.cs.html",
+          "score": 8.8,
+          "score_cleanliness": 9.2,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Orange Glow (Šilingrovo 47)",
+          "url": "https://www.booking.com/hotel/cz/boutique-city-apartments-br-no-47.cs.html",
+          "score": 8.3,
+          "score_cleanliness": 8.8,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Old Town Špilberk",
+          "url": "https://www.booking.com/hotel/cz/old-town-apartment-spilberk.cs.html",
+          "score": 8.3,
+          "score_cleanliness": 8.6,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Expo Living 33",
+          "url": "https://www.booking.com/hotel/cz/expo-living-33.cs.html",
+          "score": 8.7,
+          "score_cleanliness": 9.1,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Expo Dream Veletržní",
+          "url": "https://www.booking.com/hotel/cz/veletrzni-boutique-apartments.cs.html",
+          "score": 7.9,
+          "score_cleanliness": 8.6,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Botanica by Goodnite",
+          "url": "https://www.booking.com/hotel/cz/botanica-by-goodnite-cz.cs.html",
+          "score": 9.0,
+          "score_cleanliness": 9.4,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Riverside by Goodnite",
+          "url": "https://www.booking.com/hotel/cz/riverside-by-goodnite.cs.html",
+          "score": 8.6,
+          "score_cleanliness": 9.1,
+          "review_count": null,
+          "error": null
+        },
+        {
+          "name": "Penzion u Libušky",
+          "url": "https://www.booking.com/hotel/cz/penzion-u-libusky-29-brno-living-cz.cs.html",
+          "score": 8.1,
+          "score_cleanliness": 8.6,
+          "review_count": null,
+          "error": null
+        }
+      ]
     }
   ]
 }
