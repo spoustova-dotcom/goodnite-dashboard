@@ -1,5 +1,5 @@
 import json, re, time, os
-from datetime import datetime
+from datetime import datetime, timedelta
 from playwright.sync_api import sync_playwright
 import anthropic
 
@@ -21,6 +21,13 @@ APARTMENTS = [
     {"name": "Sky Apartments Vlhká", "url": "https://www.booking.com/hotel/cz/modern-panorama-residence.cs.html"},
 ]
 
+CZ_MONTHS = {
+    "ledna":1,"února":2,"března":3,"dubna":4,"května":5,"června":6,
+    "července":7,"srpna":8,"září":9,"října":10,"listopadu":11,"prosince":12,
+    "january":1,"february":2,"march":3,"april":4,"may":5,"june":6,
+    "july":7,"august":8,"september":9,"october":10,"november":11,"december":12,
+}
+
 def parse_score(text):
     if not text: return None
     m = re.search(r"(\d+\.?\d*)", text.strip().replace(",", "."))
@@ -30,12 +37,24 @@ def parse_score(text):
         if 1 <= val <= 10: return round(val, 1)
     return None
 
+def parse_review_date(text):
+    """Try to parse a Czech/English date string into datetime."""
+    if not text: return None
+    text_lower = text.lower()
+    for month_name, month_num in CZ_MONTHS.items():
+        if month_name in text_lower:
+            year_match = re.search(r"(\d{4})", text)
+            if year_match:
+                try:
+                    return datetime(int(year_match.group(1)), month_num, 1)
+                except:
+                    pass
+    return None
+
 def scrape_reviews(page, url, days=90):
-    """Scrape written reviews from Booking.com – only reviews from last N days."""
-    from datetime import datetime, timedelta
+    """Scrape written reviews with dates. Returns list of {text, date_str}."""
     cutoff = datetime.utcnow() - timedelta(days=days)
     reviews = []
-
     try:
         reviews_url = url.split("?")[0] + "#tab-reviews"
         page.goto(reviews_url, wait_until="domcontentloaded", timeout=30000)
@@ -45,162 +64,130 @@ def scrape_reviews(page, url, days=90):
             pass
         time.sleep(2)
 
-        # Try to grab review blocks that contain both date and text
         review_blocks = []
-        for block_sel in [
-            ".review_list_new_item_block",
-            "[data-testid='review-card']",
-            ".c-review-block",
-        ]:
+        for block_sel in [".review_list_new_item_block", "[data-testid='review-card']", ".c-review-block"]:
             blocks = page.query_selector_all(block_sel)
             if blocks:
                 review_blocks = blocks[:25]
                 break
 
-        if review_blocks:
-            for block in review_blocks:
-                block_html = block.inner_text()
+        for block in review_blocks:
+            # Get date
+            review_date = None
+            date_str = None
+            for date_sel in [".c-review-block__date", "[data-testid='review-date']", ".review_item_date", ".bui-review__date", "span[class*='date']"]:
+                try:
+                    date_el = block.query_selector(date_sel)
+                    if date_el:
+                        date_str = date_el.inner_text().strip()
+                        review_date = parse_review_date(date_str)
+                        break
+                except:
+                    pass
 
-                # Try to find date in block
-                review_date = None
-                date_patterns = [
-                    r'(\d{1,2})[.\s](\w+)[.\s](\d{4})',   # "16. dubna 2026"
-                    r'(\w+)\s+(\d{4})',                     # "dubna 2026"
-                ]
-                # Try date selectors within block
-                for date_sel in [
-                    ".c-review-block__date",
-                    "[data-testid='review-date']",
-                    ".review_item_date",
-                    ".bui-review__date",
-                    "span[class*='date']",
-                ]:
-                    try:
-                        date_el = block.query_selector(date_sel)
-                        if date_el:
-                            date_txt = date_el.inner_text().strip()
-                            # Czech month names mapping
-                            CZ_MONTHS = {
-                                "ledna":1,"února":2,"března":3,"dubna":4,"května":5,"června":6,
-                                "července":7,"srpna":8,"září":9,"října":10,"listopadu":11,"prosince":12,
-                                "january":1,"february":2,"march":3,"april":4,"may":5,"june":6,
-                                "july":7,"august":8,"september":9,"october":10,"november":11,"december":12,
-                            }
-                            for month_name, month_num in CZ_MONTHS.items():
-                                if month_name in date_txt.lower():
-                                    year_match = re.search(r"(\d{4})", date_txt)
-                                    if year_match:
-                                        try:
-                                            review_date = datetime(int(year_match.group(1)), month_num, 1)
-                                        except:
-                                            pass
-                                    break
-                    except:
-                        pass
+            # Get text
+            txt = None
+            for text_sel in [".c-review__body", ".a53cbfa6de", ".review_item_review_content", ".bui-review__text"]:
+                try:
+                    text_el = block.query_selector(text_sel)
+                    if text_el:
+                        t = text_el.inner_text().strip()
+                        if t and len(t) > 20:
+                            txt = t
+                            break
+                except:
+                    pass
 
-                # Get text
-                txt = None
-                for text_sel in [
-                    ".c-review__body",
-                    ".a53cbfa6de",
-                    ".review_item_review_content",
-                    ".bui-review__text",
-                ]:
-                    try:
-                        text_el = block.query_selector(text_sel)
-                        if text_el:
-                            t = text_el.inner_text().strip()
-                            if t and len(t) > 20:
-                                txt = t
-                                break
-                    except:
-                        pass
+            if txt:
+                if review_date is None or review_date >= cutoff:
+                    reviews.append({
+                        "text": txt,
+                        "date": review_date.strftime("%Y-%m") if review_date else None,
+                    })
 
-                if txt:
-                    # Include if no date found (can't filter) or within cutoff
-                    if review_date is None or review_date >= cutoff:
-                        reviews.append(txt)
-
-        # Fallback: just grab text without date filtering
+        # Fallback without date
         if not reviews:
             for sel in [
                 ".review_list_new_item_block .c-review__body",
                 "[data-testid='review-card'] .a53cbfa6de",
                 ".c-review-block .c-review__body",
                 ".review_item_review_content",
-                ".bui-review__text",
                 ".review_neg .review_body",
-                "[data-testid='review-negative-text']",
             ]:
                 els = page.query_selector_all(sel)
                 if els:
                     for el in els[:20]:
-                        txt = el.inner_text().strip()
-                        if txt and len(txt) > 20:
-                            reviews.append(txt)
+                        t = el.inner_text().strip()
+                        if t and len(t) > 20:
+                            reviews.append({"text": t, "date": None})
                     if reviews:
                         break
 
     except Exception as e:
         print(f"    Reviews error: {e}")
 
-    print(f"    Found {len(reviews)} reviews (last {days} days filter)")
+    print(f"    Found {len(reviews)} reviews (last {days} days)")
     return reviews
 
 def analyze_reviews_with_claude(apt_name, reviews):
-    """Use Claude to analyze reviews and extract issues."""
     if not reviews:
         return {"issues": [], "summary": None, "issue_counts": {}}
-
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
-        print("    No ANTHROPIC_API_KEY found, skipping analysis")
         return {"issues": [], "summary": None, "issue_counts": {}}
 
     client = anthropic.Anthropic(api_key=api_key)
+    reviews_text = "\n---\n".join([r["text"] for r in reviews[:15]])
 
-    reviews_text = "\n---\n".join(reviews[:15])  # max 15 reviews
-
-    prompt = f"""Analyzuj tyto recenze ubytování "{apt_name}" z Booking.com a extrahuj hlavní problémy, které hosté zmiňují.
+    prompt = f"""Analyzuj tyto recenze ubytování "{apt_name}" z Booking.com a extrahuj hlavní problémy.
 
 RECENZE:
 {reviews_text}
 
-Vrať POUZE JSON v tomto formátu (bez markdown, bez komentářů):
+Vrať POUZE JSON (bez markdown):
 {{
   "summary": "1-2 věty shrnující hlavní problémy",
-  "issues": ["konkrétní problém 1", "konkrétní problém 2", ...],
-  "issue_counts": {{
-    "Vůně": 0,
-    "Čistota": 0,
-    "Hluk": 0,
-    "Údržba/vybavení": 0,
-    "Komunikace": 0,
-    "Parkování": 0,
-    "Jiné": 0
-  }}
+  "issues": ["konkrétní problém 1", "konkrétní problém 2"],
+  "issue_counts": {{"Vůně":0,"Čistota":0,"Hluk":0,"Údržba/vybavení":0,"Komunikace":0,"Parkování":0,"Jiné":0}}
 }}
-
-Pravidla:
-- issues: max 5 nejdůležitějších konkrétních problémů (česky, stručně)
-- issue_counts: kolik recenzí zmiňuje danou kategorii
-- Pokud nejsou žádné problémy, issues je prázdný seznam a summary je null
-- Pouze negativní zpětná vazba, pozitivní ignoruj"""
+Pravidla: max 5 issues, pouze negativní, issues=[] pokud žádné problémy."""
 
     try:
-        message = client.messages.create(
+        msg = client.messages.create(
             model="claude-haiku-4-5-20251001",
             max_tokens=600,
             messages=[{"role": "user", "content": prompt}]
         )
-        raw = message.content[0].text.strip()
-        raw = re.sub(r"```json|```", "", raw).strip()
+        raw = re.sub(r"```json|```", "", msg.content[0].text.strip()).strip()
         result = json.loads(raw)
-        print(f"    Claude analysis: {len(result.get('issues',[]))} issues found")
+        print(f"    Claude: {len(result.get('issues',[]))} issues")
         return result
     except Exception as e:
-        print(f"    Claude analysis error: {e}")
+        print(f"    Claude error: {e}")
         return {"issues": [], "summary": None, "issue_counts": {}}
+
+def merge_reviews_archive(existing_archive, apt_name, new_reviews):
+    """
+    Merge new reviews into the archive, grouped by YYYY-MM.
+    Archive structure: { "apt_name": { "YYYY-MM": ["text1", "text2", ...] } }
+    Keeps max 20 reviews per month per apartment to limit file size.
+    """
+    if apt_name not in existing_archive:
+        existing_archive[apt_name] = {}
+
+    apt_archive = existing_archive[apt_name]
+    for r in new_reviews:
+        month_key = r.get("date") or datetime.utcnow().strftime("%Y-%m")
+        if month_key not in apt_archive:
+            apt_archive[month_key] = []
+        # Avoid duplicates
+        if r["text"] not in apt_archive[month_key]:
+            apt_archive[month_key].append(r["text"])
+        # Cap at 20 per month
+        if len(apt_archive[month_key]) > 20:
+            apt_archive[month_key] = apt_archive[month_key][-20:]
+
+    return existing_archive
 
 def scrape_apartment(page, apt):
     print(f"Scraping: {apt['name']}")
@@ -216,7 +203,6 @@ def scrape_apartment(page, apt):
         time.sleep(2)
         content = page.content()
 
-        # Overall score
         for sel in ["[data-testid='review-score-right-component']", "div.b5cd09854e.d10a6220b4", "div.ac4a7896c7", "div.b5cd09854e", "span.b5cd09854e"]:
             el = page.query_selector(sel)
             if el:
@@ -229,12 +215,9 @@ def scrape_apartment(page, apt):
                     candidate = parse_score(label)
                     if candidate: score = candidate; break
 
-        # Cleanliness – look for subscores
         clean_matches = re.findall(r'[Čč]istota[^0-9]*?(\d[,.]\d)', content)
         if clean_matches:
             score_cleanliness = parse_score(clean_matches[0])
-        
-        # Try dedicated cleanliness elements
         if not score_cleanliness:
             for sel in ["[data-testid='review-subscore-cleanliness'] .b5cd09854e", ".cleanliness .b5cd09854e"]:
                 el = page.query_selector(sel)
@@ -242,21 +225,18 @@ def scrape_apartment(page, apt):
                     score_cleanliness = parse_score(el.inner_text())
                     if score_cleanliness: break
 
-        # Review count
         count_m = re.findall(r'(\d[\d\s]{0,4})\s*(?:recenz|hodnocen|review)', content, re.IGNORECASE)
         if count_m:
             try: review_count = int(count_m[0].replace(" ","").replace("\xa0",""))
             except: pass
 
-        # Scrape written reviews
         reviews_raw = scrape_reviews(page, apt["url"])
-        print(f"  → score={score}, cleanliness={score_cleanliness}, reviews={review_count}, texts={len(reviews_raw)}")
+        print(f"  → score={score}, clean={score_cleanliness}, reviews={review_count}, texts={len(reviews_raw)}")
 
     except Exception as e:
         error = str(e)
         print(f"  ERROR: {e}")
 
-    # Analyze reviews with Claude
     analysis = analyze_reviews_with_claude(apt["name"], reviews_raw)
 
     return {
@@ -270,6 +250,7 @@ def scrape_apartment(page, apt):
         "review_summary": analysis.get("summary"),
         "issue_counts": analysis.get("issue_counts", {}),
         "reviews_analyzed": len(reviews_raw),
+        "reviews_raw": reviews_raw,
     }
 
 def main():
@@ -290,16 +271,21 @@ def main():
             time.sleep(2)
         browser.close()
 
-    # Load existing data to preserve history
+    # Load existing data
     existing = {}
     if os.path.exists("data.json"):
         with open("data.json", encoding="utf-8") as f:
             try: existing = json.load(f)
             except: pass
 
-    history = existing.get("history", [])
+    # Update reviews archive (grouped by month)
+    reviews_archive = existing.get("reviews_archive", {})
+    for a in results:
+        if a.get("reviews_raw"):
+            reviews_archive = merge_reviews_archive(reviews_archive, a["name"], a["reviews_raw"])
 
-    # Avoid duplicate snapshot for the same date – keep only latest run per day
+    # Update history (weekly snapshots)
+    history = existing.get("history", [])
     today = now[:10]
     history = [s for s in history if s["scraped_at"][:10] != today]
     history.append({
@@ -314,17 +300,22 @@ def main():
         } for a in results]
     })
 
+    # Strip reviews_raw from output apartments (already in archive)
+    clean_results = [{k: v for k, v in a.items() if k != "reviews_raw"} for a in results]
+
     output = {
         "scraped_at": now,
-        "apartments": results,
-        "history": history
+        "apartments": clean_results,
+        "history": history,
+        "reviews_archive": reviews_archive,
     }
 
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     scored = [a for a in results if a["score"] is not None]
-    print(f"\nDone. {len(results)} apartments, {len(history)} snapshots.")
+    archive_total = sum(len(months) for apt in reviews_archive.values() for months in apt.values())
+    print(f"\nDone. {len(results)} apts, {len(history)} snapshots, {archive_total} review-months archived.")
     if scored:
         print(f"Average: {sum(a['score'] for a in scored)/len(scored):.2f} ({len(scored)}/{len(results)} OK)")
 
