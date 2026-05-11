@@ -16,57 +16,86 @@ header{border-bottom:1px solid var(--border);padding:1.5rem 2.5rem;display:flex;
 .logo-moon::after{content:'';position:absolute;width:22px;height:22px;background:var(--bg);border-radius:50%;top:2px;left:6px}
 #last-updated{font-size:0.78rem;color:var(--muted)}
 main{max-width:1200px;margin:0 auto;padding:2.5rem 2.5rem 0}
-.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:2rem}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:2rem}
 .metric{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;position:relative;overflow:hidden}
 .metric::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);opacity:0.5}
 .metric-label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.6rem}
 .metric-value{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--text);line-height:1}
 .metric-value.danger{color:var(--danger)}.metric-value.ok{color:var(--ok)}
 .metric-sub{font-size:0.75rem;color:var(--muted);margin-top:0.4rem}
-.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:1.5rem;margin-top:2rem}
-.tab-btn{background:none;border:none;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:0.85rem;padding:0.65rem 1.25rem;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color 0.15s}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:1.5rem;margin-top:2rem;overflow-x:auto}
+.tab-btn{background:none;border:none;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:0.85rem;padding:0.65rem 1.25rem;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color 0.15s;white-space:nowrap}
 .tab-btn:hover{color:var(--text)}.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
 .tab-panel{display:none}.tab-panel.active{display:block}
 .section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem}
 .section-title{font-family:'DM Serif Display',serif;font-size:1.1rem;font-weight:normal}
 .section-sub{font-size:0.78rem;color:var(--muted)}
-/* Score bars */
-.score-table{display:flex;flex-direction:column;gap:10px;margin-bottom:2rem}
-.score-row{display:grid;grid-template-columns:200px 1fr 44px;align-items:center;gap:12px}
+
+/* Score table with cleanliness */
+.score-table{display:flex;flex-direction:column;gap:8px;margin-bottom:2rem}
+.score-row{display:grid;grid-template-columns:190px 1fr 42px 42px;align-items:center;gap:10px}
+.score-header{display:grid;grid-template-columns:190px 1fr 42px 42px;gap:10px;margin-bottom:4px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.score-header span{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em}
+.score-header .sh-bar{text-align:center}
 .score-apt-name{font-size:0.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .score-track{height:8px;background:var(--surface2);border-radius:4px;overflow:hidden}
 .score-fill{height:100%;border-radius:4px;transition:width 0.6s ease}
 .score-val{font-size:0.85rem;font-weight:500;text-align:right}
+.clean-val{font-size:0.78rem;text-align:right;color:var(--muted)}
+
 /* Alerts */
 .alerts{display:flex;flex-direction:column;gap:6px}
 .alert-row{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--danger);border-radius:8px;padding:0.75rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;color:inherit;transition:background 0.15s}
 .alert-row:hover{background:var(--surface2)}
 .alert-name{font-size:0.88rem;font-weight:400;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.alert-score{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--danger)}
-.alert-reviews{font-size:0.75rem;color:var(--muted)}
+.alert-score{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--danger);white-space:nowrap}
+.alert-reviews{font-size:0.75rem;color:var(--muted);white-space:nowrap}
+
 /* Cards */
-.apt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
-.apt-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-decoration:none;color:inherit;transition:background 0.15s,transform 0.15s;display:flex;flex-direction:column;gap:8px}
+.apt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.apt-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-decoration:none;color:inherit;transition:background 0.15s,transform 0.15s;display:flex;flex-direction:column;gap:6px}
 .apt-card:hover{background:var(--surface2);transform:translateY(-1px)}
 .apt-card-name{font-size:0.82rem;line-height:1.4;flex:1}
-.apt-card-score{font-family:'DM Serif Display',serif;font-size:2rem;line-height:1}
+.apt-card-scores{display:flex;align-items:baseline;gap:10px;margin-top:2px}
+.apt-card-score{font-family:'DM Serif Display',serif;font-size:1.9rem;line-height:1}
+.apt-card-clean{font-size:0.82rem;color:var(--muted)}
+.apt-card-clean span{font-weight:500}
 .apt-card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:4px}
-.apt-card-clean{font-size:0.75rem;color:var(--muted)}
 .badge{font-size:0.68rem;padding:2px 7px;border-radius:20px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase}
 .badge-ok{background:rgba(126,200,169,0.12);color:var(--ok)}
 .badge-warn{background:rgba(224,184,112,0.12);color:var(--warn)}
 .badge-danger{background:rgba(224,112,112,0.12);color:var(--danger)}
-/* Trend chart */
-.chart-controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;align-items:center}
-.chart-controls label{font-size:0.78rem;color:var(--muted)}
-.apt-toggle{font-size:0.75rem;padding:4px 10px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:all 0.15s}
-.apt-toggle.on{border-color:var(--accent);color:var(--accent);background:rgba(200,169,110,0.08)}
-.chart-wrap{position:relative;width:100%;height:380px;margin-bottom:1rem}
+
+/* Reviews / Issues panel */
+.issues-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin-bottom:2rem}
+.issue-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem}
+.issue-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.issue-card-name{font-size:0.85rem;font-weight:500}
+.issue-card-score{font-family:'DM Serif Display',serif;font-size:1.2rem}
+.issue-summary{font-size:0.8rem;color:var(--muted);line-height:1.5;margin-bottom:10px;font-style:italic}
+.issue-tags{display:flex;flex-wrap:wrap;gap:5px}
+.issue-tag{font-size:0.72rem;padding:3px 9px;border-radius:20px;border:1px solid var(--border);color:var(--muted)}
+.issue-tag.highlight{border-color:rgba(224,112,112,0.4);color:var(--danger);background:rgba(224,112,112,0.07)}
+.no-issues{font-size:0.78rem;color:var(--ok)}
+
+/* Category bar chart */
+.cat-bars{display:flex;flex-direction:column;gap:10px;max-width:600px}
+.cat-row{display:grid;grid-template-columns:150px 1fr 36px;align-items:center;gap:10px}
+.cat-name{font-size:0.82rem;color:var(--text)}
+.cat-track{height:10px;background:var(--surface2);border-radius:5px;overflow:hidden}
+.cat-fill{height:100%;border-radius:5px;background:var(--danger)}
+.cat-val{font-size:0.82rem;font-weight:500;text-align:right;color:var(--danger)}
+
+/* Trend */
+.chart-controls{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;align-items:center}
+.apt-toggle{font-size:0.72rem;padding:3px 9px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:all 0.15s}
+.apt-toggle.on{color:var(--accent)}
+.chart-wrap{position:relative;width:100%;height:360px;margin-bottom:1rem}
 .state-msg{text-align:center;padding:4rem 2rem;color:var(--muted);font-size:0.9rem}
 .spinner{display:inline-block;width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin-right:8px;vertical-align:middle}
 @keyframes spin{to{transform:rotate(360deg)}}
 footer{max-width:1200px;margin:3rem auto 0;padding:1.25rem 2.5rem 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:0.75rem;color:var(--muted)}
-@media(max-width:640px){header{padding:1rem 1.25rem}main{padding:1.5rem 1.25rem 0}.score-row{grid-template-columns:130px 1fr 40px}footer{flex-direction:column;gap:6px;padding:1rem 1.25rem}}
+@media(max-width:640px){header{padding:1rem 1.25rem}main{padding:1.5rem 1.25rem 0}.score-row,.score-header{grid-template-columns:120px 1fr 38px 38px}footer{flex-direction:column;gap:6px;padding:1rem 1.25rem}}
 </style>
 </head>
 <body>
@@ -81,27 +110,46 @@ footer{max-width:1200px;margin:3rem auto 0;padding:1.25rem 2.5rem 0;border-top:1
     <div class="tabs">
       <button class="tab-btn active" onclick="switchTab('overview',this)">Přehled</button>
       <button class="tab-btn" onclick="switchTab('trend',this)">Vývoj v čase</button>
+      <button class="tab-btn" onclick="switchTab('issues',this)">Problémy z recenzí</button>
       <button class="tab-btn" onclick="switchTab('alerts',this)">⚠ Pozornost</button>
       <button class="tab-btn" onclick="switchTab('cards',this)">Všechny</button>
     </div>
 
+    <!-- OVERVIEW -->
     <div class="tab-panel active" id="tab-overview">
-      <div class="section-header"><span class="section-title">Hodnocení apartmánů</span><span class="section-sub">seřazeno od nejlepšího</span></div>
+      <div class="section-header"><span class="section-title">Hodnocení apartmánů</span><span class="section-sub">celkové · čistota</span></div>
+      <div class="score-header">
+        <span>Apartmán</span><span></span><span class="sh-bar">Celk.</span><span class="sh-bar">Úklid</span>
+      </div>
       <div class="score-table" id="score-bars"></div>
     </div>
 
+    <!-- TREND -->
     <div class="tab-panel" id="tab-trend">
       <div class="section-header"><span class="section-title">Vývoj hodnocení v čase</span><span class="section-sub">týdenní snapshoty</span></div>
       <div class="chart-controls" id="apt-toggles"></div>
-      <div class="chart-wrap"><canvas id="trendChart" role="img" aria-label="Liniový graf vývoje hodnocení apartmánů v čase">Vývoj hodnocení apartmánů Goodnite.</canvas></div>
+      <div class="chart-wrap"><canvas id="trendChart" role="img" aria-label="Vývoj hodnocení apartmánů v čase">Graf vývoje hodnocení.</canvas></div>
     </div>
 
+    <!-- ISSUES -->
+    <div class="tab-panel" id="tab-issues">
+      <div class="section-header"><span class="section-title">Problémy zachycené v recenzích</span><span class="section-sub">analýza textu pomocí AI</span></div>
+      <div style="margin-bottom:1.5rem">
+        <div class="section-title" style="font-size:0.9rem;margin-bottom:0.75rem">Nejčastější kategorie problémů</div>
+        <div class="cat-bars" id="cat-bars"></div>
+      </div>
+      <div class="section-title" style="font-size:0.9rem;margin-bottom:0.75rem">Detail podle apartmánu</div>
+      <div class="issues-grid" id="issues-grid"></div>
+    </div>
+
+    <!-- ALERTS -->
     <div class="tab-panel" id="tab-alerts">
       <div class="section-header"><span class="section-title">Vyžadují pozornost</span><span class="section-sub">hodnocení pod 8.5</span></div>
       <div class="alerts" id="alert-list"></div>
       <div id="no-alerts" class="state-msg" style="display:none">✓ Všechna hodnocení jsou nad 8.5</div>
     </div>
 
+    <!-- CARDS -->
     <div class="tab-panel" id="tab-cards">
       <div class="apt-grid" id="apt-cards"></div>
     </div>
@@ -115,14 +163,15 @@ footer{max-width:1200px;margin:3rem auto 0;padding:1.25rem 2.5rem 0;border-top:1
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-const COLORS = ['#c8a96e','#7ec8a9','#e07070','#78b4e0','#b07ec8','#e0b870','#7ec8c8','#e07096','#a0c878','#e09670','#9678c8','#78c8a0','#c87878','#78a0c8','#c8c078'];
+const COLORS=['#c8a96e','#7ec8a9','#e07070','#78b4e0','#b07ec8','#e0b870','#7ec8c8','#e07096','#a0c878','#e09670','#9678c8','#78c8a0','#c87878','#78a0c8','#c8c078'];
+const ISSUE_CATS=['Vůně','Čistota','Hluk','Údržba/vybavení','Komunikace','Parkování','Jiné'];
 
 function scoreColor(s){if(!s)return'#555';if(s>=9)return'var(--ok)';if(s>=8.5)return'#a0c878';if(s>=8)return'var(--warn)';return'var(--danger)'}
 function badgeClass(s){if(!s)return'badge-warn';if(s>=8.5)return'badge-ok';if(s>=8)return'badge-warn';return'badge-danger'}
 function badgeText(s){if(!s)return'N/A';if(s>=9)return'Výborné';if(s>=8.5)return'Dobré';if(s>=8)return'Sledovat';return'Pozornost'}
 function fmt(v){return(v===null||v===undefined)?'—':Number(v).toFixed(1)}
 function fmtDate(iso){return new Date(iso).toLocaleDateString('cs-CZ',{day:'numeric',month:'long',year:'numeric'})}
-function fmtShortDate(iso){const d=new Date(iso);return d.getDate()+'.'+(d.getMonth()+1)+'.'}
+function fmtShort(iso){const d=new Date(iso);return d.getDate()+'.'+(d.getMonth()+1)+'.'}
 
 function switchTab(name,btn){
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
@@ -131,130 +180,137 @@ function switchTab(name,btn){
   btn.classList.add('active');
 }
 
-let trendChart = null;
-let allApts = [];
-let activeApts = new Set();
-let historyData = [];
+let trendChart=null, allApts=[], activeApts=new Set(), historyData=[];
 
 function buildTrendChart(){
   if(trendChart){trendChart.destroy();trendChart=null;}
-  const labels = historyData.map(s=>fmtShortDate(s.scraped_at));
-  const datasets = [...activeApts].map((name,i)=>{
-    const colorIdx = allApts.indexOf(name);
-    const color = COLORS[colorIdx % COLORS.length];
-    const dataPoints = historyData.map(snap=>{
-      const apt = snap.apartments.find(a=>a.name===name);
-      return apt?apt.score:null;
-    });
-    return{label:name,data:dataPoints,borderColor:color,backgroundColor:color+'33',pointBackgroundColor:color,pointRadius:4,pointHoverRadius:6,tension:0.3,spanGaps:true};
+  const labels=historyData.map(s=>fmtShort(s.scraped_at));
+  const datasets=[...activeApts].map((name)=>{
+    const i=allApts.indexOf(name);
+    const color=COLORS[i%COLORS.length];
+    return{label:name,data:historyData.map(snap=>{const a=snap.apartments.find(x=>x.name===name);return a?a.score:null;}),
+      borderColor:color,backgroundColor:color+'22',pointBackgroundColor:color,pointRadius:4,pointHoverRadius:6,tension:0.3,spanGaps:true};
   });
-
-  const isDark = true;
-  trendChart = new Chart(document.getElementById('trendChart'),{
-    type:'line',
-    data:{labels,datasets},
-    options:{
-      responsive:true,maintainAspectRatio:false,
-      plugins:{
-        legend:{display:false},
-        tooltip:{
-          backgroundColor:'#222',borderColor:'rgba(255,255,255,0.1)',borderWidth:1,
-          titleColor:'#f0ede8',bodyColor:'#a0a098',
-          callbacks:{label:ctx=>' '+ctx.dataset.label+': '+fmt(ctx.raw)}
-        }
-      },
-      scales:{
-        x:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#7a7870',font:{size:12}}},
-        y:{min:7,max:10,grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#7a7870',font:{size:12},stepSize:0.5},
-          title:{display:true,text:'Hodnocení',color:'#7a7870',font:{size:11}}}
-      },
-      interaction:{mode:'index',intersect:false}
-    }
-  });
+  trendChart=new Chart(document.getElementById('trendChart'),{type:'line',data:{labels,datasets},options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{backgroundColor:'#222',borderColor:'rgba(255,255,255,0.1)',borderWidth:1,titleColor:'#f0ede8',bodyColor:'#a0a098',callbacks:{label:ctx=>' '+ctx.dataset.label+': '+fmt(ctx.raw)}}},
+    scales:{x:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#7a7870',font:{size:11}}},
+      y:{min:7,max:10,grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#7a7870',font:{size:11},stepSize:0.5}}}
+  }});
 }
 
 function renderToggles(){
-  const container = document.getElementById('apt-toggles');
-  container.innerHTML = '<span style="font-size:0.78rem;color:var(--muted);margin-right:4px">Zobrazit:</span>';
+  const c=document.getElementById('apt-toggles');
+  c.innerHTML='<span style="font-size:0.72rem;color:var(--muted);margin-right:4px">Zobrazit:</span>';
   allApts.forEach((name,i)=>{
-    const btn = document.createElement('button');
-    btn.className = 'apt-toggle' + (activeApts.has(name)?' on':'');
-    btn.textContent = name;
-    btn.style.borderColor = activeApts.has(name) ? COLORS[i%COLORS.length] : '';
-    btn.style.color = activeApts.has(name) ? COLORS[i%COLORS.length] : '';
-    btn.onclick = ()=>{
-      if(activeApts.has(name)) activeApts.delete(name);
-      else activeApts.add(name);
-      renderToggles();
-      buildTrendChart();
-    };
-    container.appendChild(btn);
+    const btn=document.createElement('button');
+    const color=COLORS[i%COLORS.length];
+    btn.className='apt-toggle'+(activeApts.has(name)?' on':'');
+    btn.textContent=name;
+    if(activeApts.has(name)){btn.style.borderColor=color;btn.style.color=color;}
+    btn.onclick=()=>{if(activeApts.has(name))activeApts.delete(name);else activeApts.add(name);renderToggles();buildTrendChart();};
+    c.appendChild(btn);
   });
 }
 
 function render(data){
-  const apts = data.apartments||[];
-  historyData = data.history||[];
-  allApts = [...new Set(apts.map(a=>a.name))];
-  // Default: show all apts
-  activeApts = new Set(allApts);
+  const apts=data.apartments||[];
+  historyData=data.history||[];
+  allApts=[...new Set(apts.map(a=>a.name))];
+  activeApts=new Set(allApts);
 
-  const scored = apts.filter(a=>a.score!==null);
-  const alerts = apts.filter(a=>a.score!==null&&a.score<8.5);
-  const avg = scored.length?scored.reduce((s,a)=>s+a.score,0)/scored.length:null;
+  const scored=apts.filter(a=>a.score!==null);
+  const alerts=apts.filter(a=>a.score!==null&&a.score<8.5);
+  const avg=scored.length?scored.reduce((s,a)=>s+a.score,0)/scored.length:null;
+  const avgClean=scored.filter(a=>a.score_cleanliness).length?
+    scored.filter(a=>a.score_cleanliness).reduce((s,a)=>s+a.score_cleanliness,0)/scored.filter(a=>a.score_cleanliness).length:null;
 
   document.getElementById('last-updated').textContent='Aktualizováno: '+fmtDate(data.scraped_at);
   document.getElementById('footer-updated').textContent='Data: Booking.com · '+fmtDate(data.scraped_at);
 
   document.getElementById('metrics').innerHTML=`
     <div class="metric"><div class="metric-label">Apartmánů</div><div class="metric-value">${apts.length}</div><div class="metric-sub">sledovaných</div></div>
-    <div class="metric"><div class="metric-label">Průměr</div><div class="metric-value ${avg&&avg>=8.5?'ok':'danger'}">${avg?avg.toFixed(1):'—'}</div><div class="metric-sub">z 10 (Booking)</div></div>
+    <div class="metric"><div class="metric-label">Průměr celkový</div><div class="metric-value ${avg&&avg>=8.5?'ok':'danger'}">${avg?avg.toFixed(1):'—'}</div><div class="metric-sub">z 10</div></div>
+    <div class="metric"><div class="metric-label">Průměr čistota</div><div class="metric-value ${avgClean&&avgClean>=8.5?'ok':'danger'}">${avgClean?avgClean.toFixed(1):'—'}</div><div class="metric-sub">z 10</div></div>
     <div class="metric"><div class="metric-label">Pozornost</div><div class="metric-value ${alerts.length>0?'danger':'ok'}">${alerts.length}</div><div class="metric-sub">pod 8.5</div></div>
     <div class="metric"><div class="metric-label">Snapshoty</div><div class="metric-value">${historyData.length}</div><div class="metric-sub">týdnů dat</div></div>
   `;
 
+  // Score bars with cleanliness
   const sorted=[...apts].sort((a,b)=>(b.score||0)-(a.score||0));
   document.getElementById('score-bars').innerHTML=sorted.map(a=>`
     <div class="score-row">
       <div class="score-apt-name" title="${a.name}">${a.name}</div>
       <div class="score-track"><div class="score-fill" style="width:${a.score?(a.score/10*100):0}%;background:${scoreColor(a.score)}"></div></div>
       <div class="score-val" style="color:${scoreColor(a.score)}">${fmt(a.score)}</div>
+      <div class="clean-val" style="color:${scoreColor(a.score_cleanliness)}">${fmt(a.score_cleanliness)}</div>
     </div>`).join('');
 
+  // Alerts
   if(alerts.length===0){document.getElementById('no-alerts').style.display='block';}
-  else{
-    document.getElementById('alert-list').innerHTML=alerts.sort((a,b)=>(a.score||0)-(b.score||0)).map(a=>`
-      <a class="alert-row" href="${a.url}" target="_blank" rel="noopener">
-        <span class="alert-name">${a.name}</span>
-        ${a.review_count?`<span class="alert-reviews">${a.review_count} recenzí</span>`:''}
-        <span class="alert-score">${fmt(a.score)}</span>
-      </a>`).join('');
-  }
+  else{document.getElementById('alert-list').innerHTML=alerts.sort((a,b)=>(a.score||0)-(b.score||0)).map(a=>`
+    <a class="alert-row" href="${a.url}" target="_blank" rel="noopener">
+      <span class="alert-name">${a.name}</span>
+      ${a.review_count?`<span class="alert-reviews">${a.review_count} recenzí</span>`:''}
+      <span class="alert-score">${fmt(a.score)}</span>
+    </a>`).join('');}
 
+  // Cards with cleanliness
   document.getElementById('apt-cards').innerHTML=sorted.map(a=>`
     <a class="apt-card" href="${a.url}" target="_blank" rel="noopener">
       <div class="apt-card-name">${a.name}</div>
-      <div class="apt-card-score" style="color:${scoreColor(a.score)}">${fmt(a.score)}</div>
+      <div class="apt-card-scores">
+        <div class="apt-card-score" style="color:${scoreColor(a.score)}">${fmt(a.score)}</div>
+        ${a.score_cleanliness?`<div class="apt-card-clean">úklid <span style="color:${scoreColor(a.score_cleanliness)}">${fmt(a.score_cleanliness)}</span></div>`:''}
+      </div>
       <div class="apt-card-footer">
-        <span class="apt-card-clean">${a.score_cleanliness?'Úklid: '+fmt(a.score_cleanliness):''}</span>
+        ${a.review_count?`<span style="font-size:0.72rem;color:var(--muted)">${a.review_count} recenzí</span>`:'<span></span>'}
         <span class="badge ${badgeClass(a.score)}">${badgeText(a.score)}</span>
       </div>
-      ${a.review_count?`<div style="font-size:0.72rem;color:var(--muted)">${a.review_count} recenzí</div>`:''}
     </a>`).join('');
+
+  // Issues / Reviews panel
+  const catTotals={};
+  ISSUE_CATS.forEach(c=>catTotals[c]=0);
+  apts.forEach(a=>{
+    const ic=a.issue_counts||{};
+    ISSUE_CATS.forEach(c=>{if(ic[c])catTotals[c]+=(ic[c]||0);});
+  });
+  const maxCat=Math.max(1,...Object.values(catTotals));
+  document.getElementById('cat-bars').innerHTML=ISSUE_CATS.filter(c=>catTotals[c]>0).sort((a,b)=>catTotals[b]-catTotals[a]).map(c=>`
+    <div class="cat-row">
+      <div class="cat-name">${c}</div>
+      <div class="cat-track"><div class="cat-fill" style="width:${catTotals[c]/maxCat*100}%"></div></div>
+      <div class="cat-val">${catTotals[c]}</div>
+    </div>`).join('')||(
+    '<div style="font-size:0.82rem;color:var(--muted)">Data o problémech budou dostupná po příštím spuštění scraperu.</div>'
+  );
+
+  document.getElementById('issues-grid').innerHTML=sorted.map(a=>{
+    const hasIssues=a.review_issues&&a.review_issues.length>0;
+    return`<div class="issue-card">
+      <div class="issue-card-header">
+        <div class="issue-card-name">${a.name}</div>
+        <div class="issue-card-score" style="color:${scoreColor(a.score)}">${fmt(a.score)}</div>
+      </div>
+      ${a.review_summary?`<div class="issue-summary">${a.review_summary}</div>`:''}
+      ${hasIssues
+        ?`<div class="issue-tags">${a.review_issues.map(i=>`<span class="issue-tag highlight">${i}</span>`).join('')}</div>`
+        :`<div class="no-issues">${a.reviews_analyzed>0?'✓ Žádné výrazné problémy':'Recenze ještě nebyly analyzovány'}</div>`
+      }
+    </div>`;
+  }).join('');
 
   document.getElementById('loading').style.display='none';
   document.getElementById('content').style.display='block';
-
-  // Build trend chart after DOM is ready
   renderToggles();
-  setTimeout(buildTrendChart, 50);
+  setTimeout(buildTrendChart,50);
 }
 
 fetch('data.json')
   .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
   .then(render)
   .catch(err=>{
-    console.error(err);
     document.getElementById('loading').style.display='none';
     document.getElementById('error-msg').style.display='block';
   });
