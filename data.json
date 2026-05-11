@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-11T08:40:43.468307Z",
+  "scraped_at": "2026-05-11T09:17:50.052265Z",
   "apartments": [
     {
       "name": "Enjoy Downtown 12 (SB12)",
@@ -8,9 +8,23 @@
       "score_cleanliness": 9.0,
       "review_count": 304,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Hluk ze spodních podniků a hospod v noci",
+        "Slyšitelnost všeho z okolních pokojů a chodby",
+        "Sprcha nešla dovřít, následkem voda na podlaze",
+        "Rozbitá sprcha",
+        "Vrzající podlaha"
+      ],
+      "review_summary": "Hlavními problémy jsou hluk ze spodních podniků a sousedních pokojů, který je způsoben špatnou zvukovou izolací a otevřeným vstupem do pokoje. Hosté také hlásí problémy s údržbou sprchy a podlahou.",
+      "issue_counts": {
+        "Vůně": 0,
+        "Čistota": 0,
+        "Hluk": 5,
+        "Údržba/vybavení": 3,
+        "Komunikace": 0,
+        "Parkování": 0,
+        "Jiné": 0
+      },
       "reviews_analyzed": 6
     },
     {
@@ -20,9 +34,23 @@
       "score_cleanliness": 9.5,
       "review_count": 534,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Hluk z okolních zahrádek a center do pozdních hodin",
+        "Stará dřevěná okna s nedostatečnou izolací a nerovnoměrným vytápěním",
+        "Chybí parkovací místo, parkování v parkovacím domě stojí 600 Kč/noc",
+        "Nedostatek návodů k obsluze pračky a varné desky",
+        "Opotřebované vodovodní kohoutky s špatnou regulací"
+      ],
+      "review_summary": "Hlavní problémy zahrnují hluk z okolí, špatnou izolaci oken s nedostatečným vytápěním, absence parkovacího místa a chybějící návody k obsluze domácích spotřebičů.",
+      "issue_counts": {
+        "Vůně": 0,
+        "Čistota": 0,
+        "Hluk": 1,
+        "Údržba/vybavení": 3,
+        "Komunikace": 1,
+        "Parkování": 1,
+        "Jiné": 1
+      },
       "reviews_analyzed": 4
     },
     {
@@ -32,9 +60,22 @@
       "score_cleanliness": 9.4,
       "review_count": 701,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Protékající sprchová hadice a voda v koupelně",
+        "Není možný dřívější check-in",
+        "Nelze objednat snídaně",
+        "Hluční sousedé"
+      ],
+      "review_summary": "Hlavními problémy jsou technické závady v koupelně, absence možnosti dřívějšího příjezdu a chybějící volba objednání snídaně.",
+      "issue_counts": {
+        "Vůně": 0,
+        "Čistota": 1,
+        "Hluk": 1,
+        "Údržba/vybavení": 1,
+        "Komunikace": 1,
+        "Parkování": 0,
+        "Jiné": 1
+      },
       "reviews_analyzed": 4
     },
     {
@@ -44,9 +85,23 @@
       "score_cleanliness": 9.1,
       "review_count": 357,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Fotky a popis neodpovídají skutečnosti (chybí sauna, větší kuchyň, mezonet)",
+        "Dostupný jen jeden klíč pro více rodин",
+        "Nefunkční krb a sauna",
+        "Chybějící sprchový závěs a zanedbávaná údržba sprchy",
+        "Nepříjemný a těsný rozkládací gauč"
+      ],
+      "review_summary": "Hosté si stěžují na neshodu mezi popisem a skutečností, nefunkční vybavení a nedostatečný počet klíčů. Pronajímané pokoje neodpovídají uvedeným charakteristikám.",
+      "issue_counts": {
+        "Vůně": 0,
+        "Čistota": 0,
+        "Hluk": 0,
+        "Údržba/vybavení": 3,
+        "Komunikace": 1,
+        "Parkování": 0,
+        "Jiné": 1
+      },
       "reviews_analyzed": 3
     },
     {
@@ -56,9 +111,23 @@
       "score_cleanliness": 9.5,
       "review_count": 169,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Komplikovaný a nejasný proces výběru klíčů a parkování při příjezdu",
+        "Nedostatečné spací místo - hosté spí na rozkládací sedačce v obývacím pokoji",
+        "Postele jsou hlučné a nepohodlné",
+        "Velmi studená podlaha v bytě",
+        "Absenci výtahu na 3. patru"
+      ],
+      "review_summary": "Ubytování má problémy s nedostatkem spací místa, komplikovaným procesem při příjezdu (parkování a výběr klíčů) a obtížnými podmínkami (studená podlaha, hlučné postele).",
+      "issue_counts": {
+        "Vůně": 0,
+        "Čistota": 0,
+        "Hluk": 1,
+        "Údržba/vybavení": 3,
+        "Komunikace": 1,
+        "Parkování": 1,
+        "Jiné": 0
+      },
       "reviews_analyzed": 6
     },
     {
@@ -80,9 +149,23 @@
       "score_cleanliness": 9.2,
       "review_count": 461,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Chybějící police v koupelně",
+        "Rozbité žaluzie v koupelně",
+        "Zvuk se rozléhá v pokoji",
+        "Hluk ze sousedních pokojů",
+        "Možnost větrat ložnici čerstvým vzduchem"
+      ],
+      "review_summary": "Hosté se nejčastěji stěžují na problémy se zvukem v pokojích a s údržbou vybavení, konkrétně na chybějící polici v koupelně a rozbité žaluzie.",
+      "issue_counts": {
+        "Vůně": 0,
+        "Čistota": 0,
+        "Hluk": 2,
+        "Údržba/vybavení": 2,
+        "Komunikace": 0,
+        "Parkování": 0,
+        "Jiné": 1
+      },
       "reviews_analyzed": 5
     },
     {
@@ -92,9 +175,23 @@
       "score_cleanliness": 8.7,
       "review_count": 348,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Sdílené prostory (kuchyň, koupelna) nejsou jasně popsány nebo komunikovány",
+        "Nedostatečné topení a tenké peřiny způsobují zimu na pokoji",
+        "Slyšitelný hluk od sousedů a chvějící se podlaha",
+        "Problémy s vyzvednutím klíče - nefunkční kód",
+        "Malá kapacita úložných prostor na pokoji"
+      ],
+      "review_summary": "Hosté si stěžují především na sdílené prostory, které nejsou jasně komunikovány, problémy s topením a tenkými peřinami, hluk od sousedů a technické potíže s vyzvednutím klíče.",
+      "issue_counts": {
+        "Vůně": 0,
+        "Čistota": 0,
+        "Hluk": 2,
+        "Údržba/vybavení": 4,
+        "Komunikace": 3,
+        "Parkování": 1,
+        "Jiné": 1
+      },
       "reviews_analyzed": 9
     },
     {
@@ -104,9 +201,23 @@
       "score_cleanliness": 8.6,
       "review_count": 142,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Absence výtahu v 4.-5. patře - problém pro osoby s zavazadly a starší hosty",
+        "Parkování v okolí prakticky nemožné - modrá zóna, omezený vjezd, placené místa",
+        "Poškozená koupelna - netěsné sprchy, utržené baterie, odtržené lišty, zatuchlá vůně",
+        "Chybějící nebo poškozené vybavení - chybí dveře u myčky, nedoplněná mýdla, chybí sklo ve dveřích",
+        "Nevhodné podmínky pro vyšší patra - malý prostor, hluk během deště, teplotní regulace"
+      ],
+      "review_summary": "Ubytování trpí vážnými problémy s údržbou a vybavením (netěsné sprchy, rozbitá WC, poškozené nábytek), chybí výtah pro vyšší patra a parkování v okolí je prakticky nemožné.",
+      "issue_counts": {
+        "Vůně": 2,
+        "Čistota": 1,
+        "Hluk": 1,
+        "Údržba/vybavení": 8,
+        "Komunikace": 0,
+        "Parkování": 2,
+        "Jiné": 2
+      },
       "reviews_analyzed": 9
     },
     {
@@ -116,9 +227,23 @@
       "score_cleanliness": 9.0,
       "review_count": 1412,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Hluk ze sousedních pokojů brání spánku",
+        "Kávovar nefunguje nebo není doplňován",
+        "Chybí kuchyňka v pokoji",
+        "Placené parkování (40 Kč/hod) v okolí",
+        "Neúplné nebo chybějící nádobí a talířky"
+      ],
+      "review_summary": "Hosté si stěžují především na hluk z okolních pokojů, nefunkční nebo špatně udržovaný kávovar a chybějící vybavení jako kuchyňka či kompletní nádobí. Objevují se také problémy s parkováním a diskrepancí cen.",
+      "issue_counts": {
+        "Vůně": 0,
+        "Čistota": 0,
+        "Hluk": 2,
+        "Údržba/vybavení": 3,
+        "Komunikace": 1,
+        "Parkování": 1,
+        "Jiné": 1
+      },
       "reviews_analyzed": 7
     },
     {
@@ -128,9 +253,23 @@
       "score_cleanliness": 8.6,
       "review_count": 678,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Nedostatečná informace o sdíleném bytě a sdílené koupelně již při výběru ubytování",
+        "Zápach a nepořádek z odpadu na společné koupelně",
+        "Hluk od ostatních hostů",
+        "Nepořádek po dalších hostech na společných prostorách",
+        "Nekvalitní/pohodlí postele"
+      ],
+      "review_summary": "Hlavními problémy jsou nedostatečná informace o sdíleném ubytování při rezervaci, hygienické problémy na společných prostorách a rušení od ostatních hostů.",
+      "issue_counts": {
+        "Vůně": 1,
+        "Čistota": 2,
+        "Hluk": 1,
+        "Údržba/vybavení": 1,
+        "Komunikace": 1,
+        "Parkování": 0,
+        "Jiné": 0
+      },
       "reviews_analyzed": 6
     },
     {
@@ -140,9 +279,23 @@
       "score_cleanliness": 9.4,
       "review_count": 656,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Syntetické vůně v pokojích bez předchozího upozornění způsobují bolesti hlavy",
+        "Slabý tlak vody ve sprše",
+        "Zpoždění vydání faktur po pobytu",
+        "Nepohodlná postel a polštáře",
+        "Chybí výtah"
+      ],
+      "review_summary": "Hlavními problémy jsou umělé vůně v pokojích způsobující bolesti hlavy, slabý tlak vody ve sprše, zpoždění vydání faktur a nepohodlné postele.",
+      "issue_counts": {
+        "Vůně": 1,
+        "Čistota": 0,
+        "Hluk": 0,
+        "Údržba/vybavení": 2,
+        "Komunikace": 1,
+        "Parkování": 0,
+        "Jiné": 1
+      },
       "reviews_analyzed": 5
     },
     {
@@ -152,9 +305,22 @@
       "score_cleanliness": 9.0,
       "review_count": 1134,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Záchod mimo pokoj",
+        "Chybí věšák na kabáty/bundy",
+        "Malý prostor pokoje",
+        "Netflix nefunguje kvůli více přihlášeným uživatelům"
+      ],
+      "review_summary": "Hosté si stěžují na chybějící vybavení pokoje (věšák na kabáty), umístění záchodu mimo pokoj a problémy se streamovacími službami.",
+      "issue_counts": {
+        "Vůně": 0,
+        "Čistota": 0,
+        "Hluk": 0,
+        "Údržba/vybavení": 3,
+        "Komunikace": 0,
+        "Parkování": 0,
+        "Jiné": 1
+      },
       "reviews_analyzed": 3
     },
     {
@@ -164,9 +330,23 @@
       "score_cleanliness": 8.6,
       "review_count": 2060,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Hluk z ulice a silnice",
+        "Špatná akustika mezi pokoji",
+        "Nefunkční či chybějící vybavení (fén, dveře sprchovny)",
+        "Malá velikost pokojů a nekvalitní matrace",
+        "Chemická vůně v pokoji"
+      ],
+      "review_summary": "Hosté si nejvíce stěžují na nadměrný hluk z ulice a hlavní silnice, technické nedostatky v pokojích a špatnou akustiku mezi pokoji. Dalšími problémy jsou malý prostor, chemická vůně a chybějící vybavení.",
+      "issue_counts": {
+        "Vůně": 1,
+        "Čistota": 1,
+        "Hluk": 4,
+        "Údržba/vybavení": 3,
+        "Komunikace": 0,
+        "Parkování": 0,
+        "Jiné": 2
+      },
       "reviews_analyzed": 7
     },
     {
@@ -176,9 +356,22 @@
       "score_cleanliness": 8.4,
       "review_count": 8,
       "error": null,
-      "review_issues": [],
-      "review_summary": null,
-      "issue_counts": {},
+      "review_issues": [
+        "Zvláštní zámek dveří",
+        "Divný způsob vyzvednutí klíče",
+        "Příliš intenzivní dekorativní vůně",
+        "Chybějící nebo nefunkční zásuvky u postele"
+      ],
+      "review_summary": "Hosté se sťažují na problematický zámek dveří, složitý způsob vyzvednutí klíče, přílišnou vůni v apartmánu a chybějící zásuvky u postelí.",
+      "issue_counts": {
+        "Vůně": 1,
+        "Čistota": 0,
+        "Hluk": 0,
+        "Údržba/vybavení": 2,
+        "Komunikace": 1,
+        "Parkování": 0,
+        "Jiné": 0
+      },
       "reviews_analyzed": 3
     }
   ],
@@ -559,7 +752,7 @@
       ]
     },
     {
-      "scraped_at": "2026-05-11T08:40:43.468307Z",
+      "scraped_at": "2026-05-11T09:17:50.052265Z",
       "apartments": [
         {
           "name": "Enjoy Downtown 12 (SB12)",
@@ -567,7 +760,24 @@
           "score": 8.7,
           "score_cleanliness": 9.0,
           "review_count": 304,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Hluk ze spodních podniků a hospod v noci",
+            "Slyšitelnost všeho z okolních pokojů a chodby",
+            "Sprcha nešla dovřít, následkem voda na podlaze",
+            "Rozbitá sprcha",
+            "Vrzající podlaha"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 5,
+            "Údržba/vybavení": 3,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Hlavními problémy jsou hluk ze spodních podniků a sousedních pokojů, který je způsoben špatnou zvukovou izolací a otevřeným vstupem do pokoje. Hosté také hlásí problémy s údržbou sprchy a podlahou."
         },
         {
           "name": "Enjoy Downtown 13 (SB13)",
@@ -575,7 +785,24 @@
           "score": 9.3,
           "score_cleanliness": 9.5,
           "review_count": 534,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Hluk z okolních zahrádek a center do pozdních hodin",
+            "Stará dřevěná okna s nedostatečnou izolací a nerovnoměrným vytápěním",
+            "Chybí parkovací místo, parkování v parkovacím domě stojí 600 Kč/noc",
+            "Nedostatek návodů k obsluze pračky a varné desky",
+            "Opotřebované vodovodní kohoutky s špatnou regulací"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 1,
+            "Údržba/vybavení": 3,
+            "Komunikace": 1,
+            "Parkování": 1,
+            "Jiné": 1
+          },
+          "review_summary": "Hlavní problémy zahrnují hluk z okolí, špatnou izolaci oken s nedostatečným vytápěním, absence parkovacího místa a chybějící návody k obsluze domácích spotřebičů."
         },
         {
           "name": "Enjoy Downtown – Zelný trh",
@@ -583,7 +810,23 @@
           "score": 9.2,
           "score_cleanliness": 9.4,
           "review_count": 701,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Protékající sprchová hadice a voda v koupelně",
+            "Není možný dřívější check-in",
+            "Nelze objednat snídaně",
+            "Hluční sousedé"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 1,
+            "Hluk": 1,
+            "Údržba/vybavení": 1,
+            "Komunikace": 1,
+            "Parkování": 0,
+            "Jiné": 1
+          },
+          "review_summary": "Hlavními problémy jsou technické závady v koupelně, absence možnosti dřívějšího příjezdu a chybějící volba objednání snídaně."
         },
         {
           "name": "Prezidentský mezonet",
@@ -591,7 +834,24 @@
           "score": 8.8,
           "score_cleanliness": 9.1,
           "review_count": 357,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Fotky a popis neodpovídají skutečnosti (chybí sauna, větší kuchyň, mezonet)",
+            "Dostupný jen jeden klíč pro více rodин",
+            "Nefunkční krb a sauna",
+            "Chybějící sprchový závěs a zanedbávaná údržba sprchy",
+            "Nepříjemný a těsný rozkládací gauč"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 0,
+            "Údržba/vybavení": 3,
+            "Komunikace": 1,
+            "Parkování": 0,
+            "Jiné": 1
+          },
+          "review_summary": "Hosté si stěžují na neshodu mezi popisem a skutečností, nefunkční vybavení a nedostatečný počet klíčů. Pronajímané pokoje neodpovídají uvedeným charakteristikám."
         },
         {
           "name": "Coco Chanel Boutique",
@@ -599,7 +859,24 @@
           "score": 9.3,
           "score_cleanliness": 9.5,
           "review_count": 169,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Komplikovaný a nejasný proces výběru klíčů a parkování při příjezdu",
+            "Nedostatečné spací místo - hosté spí na rozkládací sedačce v obývacím pokoji",
+            "Postele jsou hlučné a nepohodlné",
+            "Velmi studená podlaha v bytě",
+            "Absenci výtahu na 3. patru"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 1,
+            "Údržba/vybavení": 3,
+            "Komunikace": 1,
+            "Parkování": 1,
+            "Jiné": 0
+          },
+          "review_summary": "Ubytování má problémy s nedostatkem spací místa, komplikovaným procesem při příjezdu (parkování a výběr klíčů) a obtížnými podmínkami (studená podlaha, hlučné postele)."
         },
         {
           "name": "Panorama Apartment",
@@ -607,7 +884,10 @@
           "score": 10.0,
           "score_cleanliness": null,
           "review_count": 3,
-          "error": null
+          "error": null,
+          "review_issues": [],
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Great Chill (Králova 11)",
@@ -615,7 +895,24 @@
           "score": 8.7,
           "score_cleanliness": 9.2,
           "review_count": 461,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Chybějící police v koupelně",
+            "Rozbité žaluzie v koupelně",
+            "Zvuk se rozléhá v pokoji",
+            "Hluk ze sousedních pokojů",
+            "Možnost větrat ložnici čerstvým vzduchem"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 2,
+            "Údržba/vybavení": 2,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 1
+          },
+          "review_summary": "Hosté se nejčastěji stěžují na problémy se zvukem v pokojích a s údržbou vybavení, konkrétně na chybějící polici v koupelně a rozbité žaluzie."
         },
         {
           "name": "Orange Glow (Šilingrovo 47)",
@@ -623,7 +920,24 @@
           "score": 8.3,
           "score_cleanliness": 8.7,
           "review_count": 348,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Sdílené prostory (kuchyň, koupelna) nejsou jasně popsány nebo komunikovány",
+            "Nedostatečné topení a tenké peřiny způsobují zimu na pokoji",
+            "Slyšitelný hluk od sousedů a chvějící se podlaha",
+            "Problémy s vyzvednutím klíče - nefunkční kód",
+            "Malá kapacita úložných prostor na pokoji"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 2,
+            "Údržba/vybavení": 4,
+            "Komunikace": 3,
+            "Parkování": 1,
+            "Jiné": 1
+          },
+          "review_summary": "Hosté si stěžují především na sdílené prostory, které nejsou jasně komunikovány, problémy s topením a tenkými peřinami, hluk od sousedů a technické potíže s vyzvednutím klíče."
         },
         {
           "name": "Old Town Špilberk",
@@ -631,7 +945,24 @@
           "score": 8.3,
           "score_cleanliness": 8.6,
           "review_count": 142,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Absence výtahu v 4.-5. patře - problém pro osoby s zavazadly a starší hosty",
+            "Parkování v okolí prakticky nemožné - modrá zóna, omezený vjezd, placené místa",
+            "Poškozená koupelna - netěsné sprchy, utržené baterie, odtržené lišty, zatuchlá vůně",
+            "Chybějící nebo poškozené vybavení - chybí dveře u myčky, nedoplněná mýdla, chybí sklo ve dveřích",
+            "Nevhodné podmínky pro vyšší patra - malý prostor, hluk během deště, teplotní regulace"
+          ],
+          "issue_counts": {
+            "Vůně": 2,
+            "Čistota": 1,
+            "Hluk": 1,
+            "Údržba/vybavení": 8,
+            "Komunikace": 0,
+            "Parkování": 2,
+            "Jiné": 2
+          },
+          "review_summary": "Ubytování trpí vážnými problémy s údržbou a vybavením (netěsné sprchy, rozbitá WC, poškozené nábytek), chybí výtah pro vyšší patra a parkování v okolí je prakticky nemožné."
         },
         {
           "name": "Expo Living 33",
@@ -639,7 +970,24 @@
           "score": 8.7,
           "score_cleanliness": 9.0,
           "review_count": 1412,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Hluk ze sousedních pokojů brání spánku",
+            "Kávovar nefunguje nebo není doplňován",
+            "Chybí kuchyňka v pokoji",
+            "Placené parkování (40 Kč/hod) v okolí",
+            "Neúplné nebo chybějící nádobí a talířky"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 2,
+            "Údržba/vybavení": 3,
+            "Komunikace": 1,
+            "Parkování": 1,
+            "Jiné": 1
+          },
+          "review_summary": "Hosté si stěžují především na hluk z okolních pokojů, nefunkční nebo špatně udržovaný kávovar a chybějící vybavení jako kuchyňka či kompletní nádobí. Objevují se také problémy s parkováním a diskrepancí cen."
         },
         {
           "name": "Expo Dream Veletržní",
@@ -647,7 +995,24 @@
           "score": 7.9,
           "score_cleanliness": 8.6,
           "review_count": 678,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Nedostatečná informace o sdíleném bytě a sdílené koupelně již při výběru ubytování",
+            "Zápach a nepořádek z odpadu na společné koupelně",
+            "Hluk od ostatních hostů",
+            "Nepořádek po dalších hostech na společných prostorách",
+            "Nekvalitní/pohodlí postele"
+          ],
+          "issue_counts": {
+            "Vůně": 1,
+            "Čistota": 2,
+            "Hluk": 1,
+            "Údržba/vybavení": 1,
+            "Komunikace": 1,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Hlavními problémy jsou nedostatečná informace o sdíleném ubytování při rezervaci, hygienické problémy na společných prostorách a rušení od ostatních hostů."
         },
         {
           "name": "Botanica by Goodnite",
@@ -655,7 +1020,24 @@
           "score": 9.0,
           "score_cleanliness": 9.4,
           "review_count": 656,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Syntetické vůně v pokojích bez předchozího upozornění způsobují bolesti hlavy",
+            "Slabý tlak vody ve sprše",
+            "Zpoždění vydání faktur po pobytu",
+            "Nepohodlná postel a polštáře",
+            "Chybí výtah"
+          ],
+          "issue_counts": {
+            "Vůně": 1,
+            "Čistota": 0,
+            "Hluk": 0,
+            "Údržba/vybavení": 2,
+            "Komunikace": 1,
+            "Parkování": 0,
+            "Jiné": 1
+          },
+          "review_summary": "Hlavními problémy jsou umělé vůně v pokojích způsobující bolesti hlavy, slabý tlak vody ve sprše, zpoždění vydání faktur a nepohodlné postele."
         },
         {
           "name": "Riverside by Goodnite",
@@ -663,7 +1045,23 @@
           "score": 8.6,
           "score_cleanliness": 9.0,
           "review_count": 1134,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Záchod mimo pokoj",
+            "Chybí věšák na kabáty/bundy",
+            "Malý prostor pokoje",
+            "Netflix nefunguje kvůli více přihlášeným uživatelům"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 0,
+            "Údržba/vybavení": 3,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 1
+          },
+          "review_summary": "Hosté si stěžují na chybějící vybavení pokoje (věšák na kabáty), umístění záchodu mimo pokoj a problémy se streamovacími službami."
         },
         {
           "name": "Penzion u Libušky",
@@ -671,7 +1069,24 @@
           "score": 8.1,
           "score_cleanliness": 8.6,
           "review_count": 2060,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Hluk z ulice a silnice",
+            "Špatná akustika mezi pokoji",
+            "Nefunkční či chybějící vybavení (fén, dveře sprchovny)",
+            "Malá velikost pokojů a nekvalitní matrace",
+            "Chemická vůně v pokoji"
+          ],
+          "issue_counts": {
+            "Vůně": 1,
+            "Čistota": 1,
+            "Hluk": 4,
+            "Údržba/vybavení": 3,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 2
+          },
+          "review_summary": "Hosté si nejvíce stěžují na nadměrný hluk z ulice a hlavní silnice, technické nedostatky v pokojích a špatnou akustiku mezi pokoji. Dalšími problémy jsou malý prostor, chemická vůně a chybějící vybavení."
         },
         {
           "name": "Sky Apartments Vlhká",
@@ -679,7 +1094,23 @@
           "score": 8.1,
           "score_cleanliness": 8.4,
           "review_count": 8,
-          "error": null
+          "error": null,
+          "review_issues": [
+            "Zvláštní zámek dveří",
+            "Divný způsob vyzvednutí klíče",
+            "Příliš intenzivní dekorativní vůně",
+            "Chybějící nebo nefunkční zásuvky u postele"
+          ],
+          "issue_counts": {
+            "Vůně": 1,
+            "Čistota": 0,
+            "Hluk": 0,
+            "Údržba/vybavení": 2,
+            "Komunikace": 1,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Hosté se sťažují na problematický zámek dveří, složitý způsob vyzvednutí klíče, přílišnou vůni v apartmánu a chybějící zásuvky u postelí."
         }
       ]
     }
