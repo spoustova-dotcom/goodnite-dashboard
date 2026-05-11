@@ -239,7 +239,10 @@ def main():
         "apartments": [{
             "name": a["name"], "url": a["url"],
             "score": a["score"], "score_cleanliness": a["score_cleanliness"],
-            "review_count": a["review_count"], "error": a["error"]
+            "review_count": a["review_count"], "error": a["error"],
+            "review_issues": a.get("review_issues", []),
+            "issue_counts": a.get("issue_counts", {}),
+            "review_summary": a.get("review_summary"),
         } for a in results]
     })
 
