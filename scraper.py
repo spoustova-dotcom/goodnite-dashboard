@@ -64,18 +64,28 @@ def scrape_reviews(page, url, days=90):
             pass
         time.sleep(2)
 
+        # Try all known block selectors
         review_blocks = []
-        for block_sel in [".review_list_new_item_block", "[data-testid='review-card']", ".c-review-block"]:
+        for block_sel in [
+            ".review_list_new_item_block",
+            "[data-testid='review-card']",
+            ".c-review-block",
+            "[data-review-url]",
+            "div[itemprop='review']",
+        ]:
             blocks = page.query_selector_all(block_sel)
             if blocks:
                 review_blocks = blocks[:25]
+                print(f"      Found blocks with selector: {block_sel}")
                 break
 
         for block in review_blocks:
-            # Get date
             review_date = None
-            date_str = None
-            for date_sel in [".c-review-block__date", "[data-testid='review-date']", ".review_item_date", ".bui-review__date", "span[class*='date']"]:
+            for date_sel in [
+                ".c-review-block__date", "[data-testid='review-date']",
+                ".review_item_date", ".bui-review__date", "span[class*='date']",
+                "span[class*='Date']", ".review-score-widget__date",
+            ]:
                 try:
                     date_el = block.query_selector(date_sel)
                     if date_el:
@@ -85,9 +95,12 @@ def scrape_reviews(page, url, days=90):
                 except:
                     pass
 
-            # Get text
             txt = None
-            for text_sel in [".c-review__body", ".a53cbfa6de", ".review_item_review_content", ".bui-review__text"]:
+            for text_sel in [
+                ".c-review__body", ".a53cbfa6de", ".review_item_review_content",
+                ".bui-review__text", "span[class*='review']", "div[class*='review_body']",
+                ".review-text", "p[class*='review']",
+            ]:
                 try:
                     text_el = block.query_selector(text_sel)
                     if text_el:
@@ -105,23 +118,54 @@ def scrape_reviews(page, url, days=90):
                         "date": review_date.strftime("%Y-%m") if review_date else None,
                     })
 
-        # Fallback without date
+        # Broad fallback – try many text selectors directly
         if not reviews:
-            for sel in [
+            fallback_sels = [
                 ".review_list_new_item_block .c-review__body",
                 "[data-testid='review-card'] .a53cbfa6de",
                 ".c-review-block .c-review__body",
                 ".review_item_review_content",
                 ".review_neg .review_body",
-            ]:
+                "span.a53cbfa6de",
+                "div.a53cbfa6de",
+                "[class*='reviewText']",
+                "[class*='review_body']",
+            ]
+            for sel in fallback_sels:
                 els = page.query_selector_all(sel)
                 if els:
+                    print(f"      Fallback selector matched: {sel} ({len(els)} items)")
                     for el in els[:20]:
                         t = el.inner_text().strip()
                         if t and len(t) > 20:
                             reviews.append({"text": t, "date": None})
                     if reviews:
                         break
+
+        # Last resort – grab all text from page matching review patterns
+        if not reviews:
+            try:
+                all_text = page.evaluate("""() => {
+                    const candidates = [];
+                    document.querySelectorAll('span, div, p').forEach(el => {
+                        const t = el.innerText ? el.innerText.trim() : '';
+                        if (t.length > 50 && t.length < 2000 &&
+                            el.children.length < 3 &&
+                            !el.closest('script') && !el.closest('style')) {
+                            const cls = (el.className || '').toLowerCase();
+                            if (cls.includes('review') || cls.includes('comment') || cls.includes('feedback')) {
+                                candidates.push(t);
+                            }
+                        }
+                    });
+                    return candidates.slice(0, 20);
+                }""")
+                if all_text:
+                    print(f"      JS fallback found {len(all_text)} candidates")
+                    for t in all_text:
+                        reviews.append({"text": t, "date": None})
+            except Exception as e:
+                print(f"      JS fallback error: {e}")
 
     except Exception as e:
         print(f"    Reviews error: {e}")
