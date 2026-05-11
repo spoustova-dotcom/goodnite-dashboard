@@ -30,9 +30,12 @@ def parse_score(text):
         if 1 <= val <= 10: return round(val, 1)
     return None
 
-def scrape_reviews(page, url):
-    """Scrape written reviews from Booking.com reviews page."""
+def scrape_reviews(page, url, days=90):
+    """Scrape written reviews from Booking.com – only reviews from last N days."""
+    from datetime import datetime, timedelta
+    cutoff = datetime.utcnow() - timedelta(days=days)
     reviews = []
+
     try:
         reviews_url = url.split("?")[0] + "#tab-reviews"
         page.goto(reviews_url, wait_until="domcontentloaded", timeout=30000)
@@ -42,41 +45,106 @@ def scrape_reviews(page, url):
             pass
         time.sleep(2)
 
-        # Try multiple selectors for review text
-        for sel in [
-            ".review_list_new_item_block .c-review__body",
-            "[data-testid='review-card'] .a53cbfa6de",
-            ".c-review-block .c-review__body",
-            ".review_item_review_content",
-            ".bui-review__text",
+        # Try to grab review blocks that contain both date and text
+        review_blocks = []
+        for block_sel in [
+            ".review_list_new_item_block",
+            "[data-testid='review-card']",
+            ".c-review-block",
         ]:
-            els = page.query_selector_all(sel)
-            if els:
-                for el in els[:20]:  # max 20 reviews
-                    txt = el.inner_text().strip()
-                    if txt and len(txt) > 20:
-                        reviews.append(txt)
-                if reviews:
-                    break
+            blocks = page.query_selector_all(block_sel)
+            if blocks:
+                review_blocks = blocks[:25]
+                break
 
-        # Fallback: look for negative review sections specifically
+        if review_blocks:
+            for block in review_blocks:
+                block_html = block.inner_text()
+
+                # Try to find date in block
+                review_date = None
+                date_patterns = [
+                    r'(\d{1,2})[.\s](\w+)[.\s](\d{4})',   # "16. dubna 2026"
+                    r'(\w+)\s+(\d{4})',                     # "dubna 2026"
+                ]
+                # Try date selectors within block
+                for date_sel in [
+                    ".c-review-block__date",
+                    "[data-testid='review-date']",
+                    ".review_item_date",
+                    ".bui-review__date",
+                    "span[class*='date']",
+                ]:
+                    try:
+                        date_el = block.query_selector(date_sel)
+                        if date_el:
+                            date_txt = date_el.inner_text().strip()
+                            # Czech month names mapping
+                            CZ_MONTHS = {
+                                "ledna":1,"února":2,"března":3,"dubna":4,"května":5,"června":6,
+                                "července":7,"srpna":8,"září":9,"října":10,"listopadu":11,"prosince":12,
+                                "january":1,"february":2,"march":3,"april":4,"may":5,"june":6,
+                                "july":7,"august":8,"september":9,"october":10,"november":11,"december":12,
+                            }
+                            for month_name, month_num in CZ_MONTHS.items():
+                                if month_name in date_txt.lower():
+                                    year_match = re.search(r"(\d{4})", date_txt)
+                                    if year_match:
+                                        try:
+                                            review_date = datetime(int(year_match.group(1)), month_num, 1)
+                                        except:
+                                            pass
+                                    break
+                    except:
+                        pass
+
+                # Get text
+                txt = None
+                for text_sel in [
+                    ".c-review__body",
+                    ".a53cbfa6de",
+                    ".review_item_review_content",
+                    ".bui-review__text",
+                ]:
+                    try:
+                        text_el = block.query_selector(text_sel)
+                        if text_el:
+                            t = text_el.inner_text().strip()
+                            if t and len(t) > 20:
+                                txt = t
+                                break
+                    except:
+                        pass
+
+                if txt:
+                    # Include if no date found (can't filter) or within cutoff
+                    if review_date is None or review_date >= cutoff:
+                        reviews.append(txt)
+
+        # Fallback: just grab text without date filtering
         if not reviews:
             for sel in [
+                ".review_list_new_item_block .c-review__body",
+                "[data-testid='review-card'] .a53cbfa6de",
+                ".c-review-block .c-review__body",
+                ".review_item_review_content",
+                ".bui-review__text",
                 ".review_neg .review_body",
                 "[data-testid='review-negative-text']",
-                ".c-review-block__negative .c-review__body",
             ]:
                 els = page.query_selector_all(sel)
-                for el in els[:20]:
-                    txt = el.inner_text().strip()
-                    if txt and len(txt) > 20:
-                        reviews.append(txt)
-                if reviews:
-                    break
+                if els:
+                    for el in els[:20]:
+                        txt = el.inner_text().strip()
+                        if txt and len(txt) > 20:
+                            reviews.append(txt)
+                    if reviews:
+                        break
 
     except Exception as e:
         print(f"    Reviews error: {e}")
 
+    print(f"    Found {len(reviews)} reviews (last {days} days filter)")
     return reviews
 
 def analyze_reviews_with_claude(apt_name, reviews):
