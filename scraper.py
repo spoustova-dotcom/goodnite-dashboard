@@ -139,26 +139,31 @@ def fetch_reviews_via_graphql(page, hotel_id, ufi, cookies, cutoff_date, max_rev
         }
 
         try:
-            # Use Playwright's fetch API to make the request with browser cookies
-            response = page.evaluate("""async ({url, payload, headers}) => {
-                const resp = await fetch(url, {
-                    method: 'POST',
-                    headers: headers,
-                    body: JSON.stringify(payload),
-                    credentials: 'include'
-                });
-                return await resp.json();
-            }""", {"url": graphql_url, "payload": payload, "headers": {
+            # Use Python requests with captured cookies for reliability
+            import requests as req_lib
+            session_headers = {
                 "Content-Type": "application/json",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Accept": "*/*",
+                "Accept-Language": "cs,en;q=0.9",
+                "Origin": "https://www.booking.com",
+                "Referer": f"https://www.booking.com/hotel/cz/hotel.cs.html#tab-reviews",
                 "x-booking-context-action-name": "hotel_irene",
-            }})
+                "x-booking-context-aid": "2311236",
+                "Cookie": cookie_str,
+            }
+            resp = req_lib.post(graphql_url, json=payload, headers=session_headers, timeout=15)
+            response = resp.json()
 
             cards = (response.get("data", {})
                            .get("reviewListFrontend", {})
                            .get("reviewCard", []))
 
             if not cards:
-                print(f"    No more reviews at skip={skip}")
+                # Debug: show what we got back
+                keys = list(response.get("data", {}).keys()) if response.get("data") else []
+                errors = response.get("errors", [])
+                print(f"    No cards at skip={skip}. data keys={keys}, errors={errors[:1] if errors else 'none'}")
                 break
 
             for card in cards:
