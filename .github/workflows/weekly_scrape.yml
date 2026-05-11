@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install playwright beautifulsoup4 anthropic
+          pip install playwright beautifulsoup4 anthropic requests
           playwright install chromium
           playwright install-deps chromium
 
