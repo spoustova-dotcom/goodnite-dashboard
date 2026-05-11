@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-11T10:27:40.818848Z",
+  "scraped_at": "2026-05-11T10:37:46.045088Z",
   "apartments": [
     {
       "name": "Enjoy Downtown 12 (SB12)",
@@ -78,7 +78,7 @@
       "url": "https://www.booking.com/hotel/cz/boutique-chill-apartments-br-no-11.cs.html",
       "score": 8.7,
       "score_cleanliness": 9.2,
-      "review_count": 461,
+      "review_count": 458,
       "error": null,
       "review_issues": [],
       "review_summary": null,
@@ -559,7 +559,7 @@
       ]
     },
     {
-      "scraped_at": "2026-05-11T10:27:40.818848Z",
+      "scraped_at": "2026-05-11T10:37:46.045088Z",
       "apartments": [
         {
           "name": "Enjoy Downtown 12 (SB12)",
@@ -632,7 +632,7 @@
           "url": "https://www.booking.com/hotel/cz/boutique-chill-apartments-br-no-11.cs.html",
           "score": 8.7,
           "score_cleanliness": 9.2,
-          "review_count": 461,
+          "review_count": 458,
           "error": null,
           "review_issues": [],
           "issue_counts": {},
