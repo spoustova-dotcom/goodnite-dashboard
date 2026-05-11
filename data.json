@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-11T09:56:18.664901Z",
+  "scraped_at": "2026-05-11T10:27:40.818848Z",
   "apartments": [
     {
       "name": "Enjoy Downtown 12 (SB12)",
@@ -8,41 +8,22 @@
       "score_cleanliness": 9.0,
       "review_count": 304,
       "error": null,
-      "review_issues": [
-        "Chybějící doplňky u kávovaru (např. kávové kapsle)",
-        "Matrace je pro některé hosty příliš měkká"
-      ],
-      "review_summary": "Ubytování má výborné hodnocení 8.7 se silnými stránkami v lokalitě, čistotě a vybavení. Identifikované problémy jsou minimální a téměř zanedbatelné.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 2,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_issues": [],
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Enjoy Downtown 13 (SB13)",
       "url": "https://www.booking.com/hotel/cz/enjoy-downtown-apartments.cs.html",
       "score": 9.3,
       "score_cleanliness": 9.5,
-      "review_count": 534,
+      "review_count": 535,
       "error": null,
       "review_issues": [],
-      "review_summary": "Analýza recenzí neodhalila žádné zmíněné problémy. Ubytování má excelentní hodnocení (9.3/10) se 534 recenzemi a všechny uvedené komentáře jsou pozitivní.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Enjoy Downtown – Zelný trh",
@@ -51,22 +32,10 @@
       "score_cleanliness": 9.4,
       "review_count": 701,
       "error": null,
-      "review_issues": [
-        "Chybějí skříně/úložný prostor pro dlouhodobější pobyt",
-        "Kód pro ubytování přišel se zpožděním (až ve 15:00 místo času příjezdu)",
-        "Hluk zvenku (ačkoli popisován jako tolerovatelný vzhledem k centru)"
-      ],
-      "review_summary": "Ubytování má excellent recenze s minimálními problémy. Hlavní nedostatky se týkají nedostatečného úložného prostoru pro dlouhodobé pobyty a zpoždění při předání přístupového kódu.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 1,
-        "Údržba/vybavení": 2,
-        "Komunikace": 1,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_issues": [],
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Prezidentský mezonet",
@@ -76,17 +45,9 @@
       "review_count": 357,
       "error": null,
       "review_issues": [],
-      "review_summary": "Analýza dostupných recenzí neukazuje žádné konkrétní problémy. Všechny uvedené recenze jsou pozitivní a chválí lokalitu, vybavení, čistotu a pohodlí ubytování.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Coco Chanel Boutique",
@@ -96,17 +57,9 @@
       "review_count": 169,
       "error": null,
       "review_issues": [],
-      "review_summary": "Recenze neobsahují žádné výrazné negativní problémy. Ubytování je hodnoceno jako fantastické se skóre 9,3 a všechny recenze jsou pozitivní.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Panorama Apartment",
@@ -116,17 +69,9 @@
       "review_count": 3,
       "error": null,
       "review_issues": [],
-      "review_summary": "Na základě dostupných recenzí nebyl identifikován žádný hlavní problém. Ubytování 'Panorama Apartment' má konzistentně vynikající hodnocení ve všech kategoriích.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Great Chill (Králova 11)",
@@ -136,41 +81,21 @@
       "review_count": 461,
       "error": null,
       "review_issues": [],
-      "review_summary": "Na základě analýzy recenzí nejsou identifikovány žádné konkrétní problémy. Ubytování dosahuje vysokého hodnocení 8.7/10 se 461 recenzemi, všechny zobrazené recenze jsou pozitivní.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Orange Glow (Šilingrovo 47)",
       "url": "https://www.booking.com/hotel/cz/boutique-city-apartments-br-no-47.cs.html",
       "score": 8.3,
       "score_cleanliness": 8.7,
-      "review_count": 348,
+      "review_count": 349,
       "error": null,
-      "review_issues": [
-        "Hluk od hostů v jiných pokojích v nočních hodinách",
-        "Chybí malý stolek v pokoji",
-        "Nutnost zvyknout si na sdílené prostory"
-      ],
-      "review_summary": "Hlavním problémem je hluk od ostatních hostů v nočních hodinách kvůli sdíleným prostorům. Menší nedostatek je absence malého stolku v pokoji.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 1,
-        "Údržba/vybavení": 1,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 1
-      },
-      "reviews_analyzed": 5
+      "review_issues": [],
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Old Town Špilberk",
@@ -179,44 +104,22 @@
       "score_cleanliness": 8.6,
       "review_count": 142,
       "error": null,
-      "review_issues": [
-        "WiFi zdarma má nízkou kvalitu (6,5 bodů)"
-      ],
-      "review_summary": "Recenze jsou převážně pozitivní. Jediným identifikovaným problémem je slabší WiFi připojení (6,5 bodů), které výrazně zaostává za ostatními aspekty ubytování.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 1
-      },
-      "reviews_analyzed": 5
+      "review_issues": [],
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Expo Living 33",
       "url": "https://www.booking.com/hotel/cz/expo-living-33.cs.html",
       "score": 8.7,
       "score_cleanliness": 9.0,
-      "review_count": 1412,
+      "review_count": 1411,
       "error": null,
-      "review_issues": [
-        "Snídaně není poskytnuta",
-        "Chybí část vybavení pokoje (misky, nádobí)",
-        "Problém s televizí v pokoji"
-      ],
-      "review_summary": "Ubytování má minimální problémy. Hlavní negativní bodů se týkají absence snídaně a chybějícího vybavení v pokojích (mísky na nádobí).",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 2,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 1
-      },
-      "reviews_analyzed": 5
+      "review_issues": [],
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Expo Dream Veletržní",
@@ -226,17 +129,9 @@
       "review_count": 678,
       "error": null,
       "review_issues": [],
-      "review_summary": "Recenze neobsahují výrazné negativní zpětnou vazbu. Ubytování je hodnoceno pozitivně se skóre 7,9/10, vysokou čistotou (8,6) a kvalitní dostupností WiFi (9,0).",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Botanica by Goodnite",
@@ -246,17 +141,9 @@
       "review_count": 656,
       "error": null,
       "review_issues": [],
-      "review_summary": "V poskytnutých recenzích nejsou identifikovány žádné hlavní problémy. Všechna hodnocení jsou pozitivní s průměrem 9,0 bodů.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Riverside by Goodnite",
@@ -266,17 +153,9 @@
       "review_count": 1134,
       "error": null,
       "review_issues": [],
-      "review_summary": "Na základě analýzy poskytnutých recenzí nejsou identifikovány žádné konkrétní problémy. Všechny recenze jsou pozitivní a zdůrazňují kvalitu personálu, čistotu, snídaně a klid na místě.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Penzion u Libušky",
@@ -285,20 +164,10 @@
       "score_cleanliness": 8.6,
       "review_count": 2060,
       "error": null,
-      "review_issues": [
-        "Starý dům s neobvyklou dispozicí"
-      ],
-      "review_summary": "Recenze jsou primárně pozitivní se skórem 8.1. V uvedených negativních poznámkách se objevuje pouze stížnost na starý dům s podivnou dispozicí.",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 1,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_issues": [],
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     },
     {
       "name": "Sky Apartments Vlhká",
@@ -308,17 +177,9 @@
       "review_count": 8,
       "error": null,
       "review_issues": [],
-      "review_summary": "Na základě dostupných recenzí nejsou identifikovány konkrétní negativní problémy. Apartmány jsou hodnoceny velmi dobře se skóre 8.1, přičemž jediným slabším bodem je lokalita (7.2).",
-      "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 0,
-        "Komunikace": 0,
-        "Parkování": 0,
-        "Jiné": 0
-      },
-      "reviews_analyzed": 5
+      "review_summary": null,
+      "issue_counts": {},
+      "reviews_analyzed": 0
     }
   ],
   "history": [
@@ -698,7 +559,7 @@
       ]
     },
     {
-      "scraped_at": "2026-05-11T09:56:18.664901Z",
+      "scraped_at": "2026-05-11T10:27:40.818848Z",
       "apartments": [
         {
           "name": "Enjoy Downtown 12 (SB12)",
@@ -707,39 +568,20 @@
           "score_cleanliness": 9.0,
           "review_count": 304,
           "error": null,
-          "review_issues": [
-            "Chybějící doplňky u kávovaru (např. kávové kapsle)",
-            "Matrace je pro některé hosty příliš měkká"
-          ],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 2,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Ubytování má výborné hodnocení 8.7 se silnými stránkami v lokalitě, čistotě a vybavení. Identifikované problémy jsou minimální a téměř zanedbatelné."
+          "review_issues": [],
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Enjoy Downtown 13 (SB13)",
           "url": "https://www.booking.com/hotel/cz/enjoy-downtown-apartments.cs.html",
           "score": 9.3,
           "score_cleanliness": 9.5,
-          "review_count": 534,
+          "review_count": 535,
           "error": null,
           "review_issues": [],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Analýza recenzí neodhalila žádné zmíněné problémy. Ubytování má excelentní hodnocení (9.3/10) se 534 recenzemi a všechny uvedené komentáře jsou pozitivní."
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Enjoy Downtown – Zelný trh",
@@ -748,21 +590,9 @@
           "score_cleanliness": 9.4,
           "review_count": 701,
           "error": null,
-          "review_issues": [
-            "Chybějí skříně/úložný prostor pro dlouhodobější pobyt",
-            "Kód pro ubytování přišel se zpožděním (až ve 15:00 místo času příjezdu)",
-            "Hluk zvenku (ačkoli popisován jako tolerovatelný vzhledem k centru)"
-          ],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 1,
-            "Údržba/vybavení": 2,
-            "Komunikace": 1,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Ubytování má excellent recenze s minimálními problémy. Hlavní nedostatky se týkají nedostatečného úložného prostoru pro dlouhodobé pobyty a zpoždění při předání přístupového kódu."
+          "review_issues": [],
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Prezidentský mezonet",
@@ -772,16 +602,8 @@
           "review_count": 357,
           "error": null,
           "review_issues": [],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Analýza dostupných recenzí neukazuje žádné konkrétní problémy. Všechny uvedené recenze jsou pozitivní a chválí lokalitu, vybavení, čistotu a pohodlí ubytování."
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Coco Chanel Boutique",
@@ -791,16 +613,8 @@
           "review_count": 169,
           "error": null,
           "review_issues": [],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Recenze neobsahují žádné výrazné negativní problémy. Ubytování je hodnoceno jako fantastické se skóre 9,3 a všechny recenze jsou pozitivní."
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Panorama Apartment",
@@ -810,16 +624,8 @@
           "review_count": 3,
           "error": null,
           "review_issues": [],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Na základě dostupných recenzí nebyl identifikován žádný hlavní problém. Ubytování 'Panorama Apartment' má konzistentně vynikající hodnocení ve všech kategoriích."
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Great Chill (Králova 11)",
@@ -829,39 +635,19 @@
           "review_count": 461,
           "error": null,
           "review_issues": [],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Na základě analýzy recenzí nejsou identifikovány žádné konkrétní problémy. Ubytování dosahuje vysokého hodnocení 8.7/10 se 461 recenzemi, všechny zobrazené recenze jsou pozitivní."
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Orange Glow (Šilingrovo 47)",
           "url": "https://www.booking.com/hotel/cz/boutique-city-apartments-br-no-47.cs.html",
           "score": 8.3,
           "score_cleanliness": 8.7,
-          "review_count": 348,
+          "review_count": 349,
           "error": null,
-          "review_issues": [
-            "Hluk od hostů v jiných pokojích v nočních hodinách",
-            "Chybí malý stolek v pokoji",
-            "Nutnost zvyknout si na sdílené prostory"
-          ],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 1,
-            "Údržba/vybavení": 1,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 1
-          },
-          "review_summary": "Hlavním problémem je hluk od ostatních hostů v nočních hodinách kvůli sdíleným prostorům. Menší nedostatek je absence malého stolku v pokoji."
+          "review_issues": [],
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Old Town Špilberk",
@@ -870,42 +656,20 @@
           "score_cleanliness": 8.6,
           "review_count": 142,
           "error": null,
-          "review_issues": [
-            "WiFi zdarma má nízkou kvalitu (6,5 bodů)"
-          ],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 1
-          },
-          "review_summary": "Recenze jsou převážně pozitivní. Jediným identifikovaným problémem je slabší WiFi připojení (6,5 bodů), které výrazně zaostává za ostatními aspekty ubytování."
+          "review_issues": [],
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Expo Living 33",
           "url": "https://www.booking.com/hotel/cz/expo-living-33.cs.html",
           "score": 8.7,
           "score_cleanliness": 9.0,
-          "review_count": 1412,
+          "review_count": 1411,
           "error": null,
-          "review_issues": [
-            "Snídaně není poskytnuta",
-            "Chybí část vybavení pokoje (misky, nádobí)",
-            "Problém s televizí v pokoji"
-          ],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 2,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 1
-          },
-          "review_summary": "Ubytování má minimální problémy. Hlavní negativní bodů se týkají absence snídaně a chybějícího vybavení v pokojích (mísky na nádobí)."
+          "review_issues": [],
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Expo Dream Veletržní",
@@ -915,16 +679,8 @@
           "review_count": 678,
           "error": null,
           "review_issues": [],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Recenze neobsahují výrazné negativní zpětnou vazbu. Ubytování je hodnoceno pozitivně se skóre 7,9/10, vysokou čistotou (8,6) a kvalitní dostupností WiFi (9,0)."
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Botanica by Goodnite",
@@ -934,16 +690,8 @@
           "review_count": 656,
           "error": null,
           "review_issues": [],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "V poskytnutých recenzích nejsou identifikovány žádné hlavní problémy. Všechna hodnocení jsou pozitivní s průměrem 9,0 bodů."
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Riverside by Goodnite",
@@ -953,16 +701,8 @@
           "review_count": 1134,
           "error": null,
           "review_issues": [],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Na základě analýzy poskytnutých recenzí nejsou identifikovány žádné konkrétní problémy. Všechny recenze jsou pozitivní a zdůrazňují kvalitu personálu, čistotu, snídaně a klid na místě."
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Penzion u Libušky",
@@ -971,19 +711,9 @@
           "score_cleanliness": 8.6,
           "review_count": 2060,
           "error": null,
-          "review_issues": [
-            "Starý dům s neobvyklou dispozicí"
-          ],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 1,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Recenze jsou primárně pozitivní se skórem 8.1. V uvedených negativních poznámkách se objevuje pouze stížnost na starý dům s podivnou dispozicí."
+          "review_issues": [],
+          "issue_counts": {},
+          "review_summary": null
         },
         {
           "name": "Sky Apartments Vlhká",
@@ -993,16 +723,8 @@
           "review_count": 8,
           "error": null,
           "review_issues": [],
-          "issue_counts": {
-            "Vůně": 0,
-            "Čistota": 0,
-            "Hluk": 0,
-            "Údržba/vybavení": 0,
-            "Komunikace": 0,
-            "Parkování": 0,
-            "Jiné": 0
-          },
-          "review_summary": "Na základě dostupných recenzí nejsou identifikovány konkrétní negativní problémy. Apartmány jsou hodnoceny velmi dobře se skóre 8.1, přičemž jediným slabším bodem je lokalita (7.2)."
+          "issue_counts": {},
+          "review_summary": null
         }
       ]
     }
