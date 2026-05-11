@@ -23,11 +23,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install playwright beautifulsoup4
+          pip install playwright beautifulsoup4 anthropic
           playwright install chromium
           playwright install-deps chromium
 
       - name: Run scraper
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scraper.py
 
       - name: Commit updated data.json
