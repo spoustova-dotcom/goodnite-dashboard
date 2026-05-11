@@ -21,7 +21,7 @@ APARTMENTS = [
     {"name": "Sky Apartments Vlhká", "url": "https://www.booking.com/hotel/cz/modern-panorama-residence.cs.html"},
 ]
 
-GRAPHQL_QUERY = """query ReviewList($input: ReviewListFrontendInput!, $shouldShowReviewListPhotoAltText: Boolean = false) {
+GRAPHQL_QUERY = """query ReviewList($input: ReviewListFrontendInput!) {
   reviewListFrontend(input: $input) {
     ... on ReviewListFrontendResult {
       reviewCard {
@@ -122,7 +122,7 @@ def fetch_reviews_via_graphql(page, hotel_id, ufi, cookies, cutoff_date, max_rev
         payload = {
             "operationName": "ReviewList",
             "variables": {
-                "shouldShowReviewListPhotoAltText": True,
+
                 "input": {
                     "hotelId": hotel_id,
                     "ufi": ufi if ufi else -542184,
