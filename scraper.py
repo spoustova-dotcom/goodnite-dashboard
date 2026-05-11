@@ -1,6 +1,4 @@
-import json
-import re
-import time
+import json, re, time, os
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 
@@ -23,124 +21,88 @@ APARTMENTS = [
 ]
 
 def parse_score(text):
-    if not text:
-        return None
-    text = text.strip().replace(",", ".")
-    m = re.search(r"(\d+\.?\d*)", text)
+    if not text: return None
+    m = re.search(r"(\d+\.?\d*)", text.strip().replace(",", "."))
     if m:
         val = float(m.group(1))
-        if val > 10:
-            val = val / 10
-        if 1 <= val <= 10:
-            return round(val, 1)
+        if val > 10: val = val / 10
+        if 1 <= val <= 10: return round(val, 1)
     return None
 
 def scrape_all():
     results = []
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            locale="cs-CZ",
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-        )
+        context = browser.new_context(locale="cs-CZ", user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
         page = context.new_page()
-
         for apt in APARTMENTS:
             print(f"Scraping: {apt['name']}")
-            score = None
-            score_cleanliness = None
-            review_count = None
-            error = None
-
+            score = score_cleanliness = review_count = error = None
             try:
                 page.goto(apt["url"], wait_until="domcontentloaded", timeout=30000)
-                # wait for review score to appear
-                try:
-                    page.wait_for_selector("[data-testid='review-score-right-component'], .b5cd09854e, .ac4a7896c7", timeout=8000)
-                except:
-                    pass
+                try: page.wait_for_selector("[data-testid='review-score-right-component'], .b5cd09854e, .ac4a7896c7", timeout=8000)
+                except: pass
                 time.sleep(2)
-
                 content = page.content()
-
-                # Overall score – try JS-rendered selectors
-                for sel in [
-                    "[data-testid='review-score-right-component']",
-                    "div.b5cd09854e.d10a6220b4",
-                    "div.ac4a7896c7",
-                    "div.b5cd09854e",
-                    "span.b5cd09854e",
-                ]:
+                for sel in ["[data-testid='review-score-right-component']", "div.b5cd09854e.d10a6220b4", "div.ac4a7896c7", "div.b5cd09854e", "span.b5cd09854e"]:
                     el = page.query_selector(sel)
                     if el:
-                        txt = el.inner_text()
-                        candidate = parse_score(txt)
-                        if candidate:
-                            score = candidate
-                            break
-
-                # Fallback: aria-label on score elements
+                        candidate = parse_score(el.inner_text())
+                        if candidate: score = candidate; break
                 if not score:
-                    els = page.query_selector_all("[aria-label]")
-                    for el in els:
+                    for el in page.query_selector_all("[aria-label]"):
                         label = el.get_attribute("aria-label") or ""
-                        if any(w in label.lower() for w in ["hodnocení", "ohodnocen", "score", "rated"]):
+                        if any(w in label.lower() for w in ["hodnocení","ohodnocen","score","rated"]):
                             candidate = parse_score(label)
-                            if candidate and 1 <= candidate <= 10:
-                                score = candidate
-                                break
-
-                # Cleanliness
-                import re as re2
-                matches = re2.findall(r'[Čč]istota.*?(\d[,.]\d)', content)
-                if matches:
-                    score_cleanliness = parse_score(matches[0])
-
-                # Review count
-                count_matches = re2.findall(r'(\d[\d\s]{0,4})\s*(?:recenz|hodnocen|review)', content, re2.IGNORECASE)
-                if count_matches:
-                    try:
-                        review_count = int(count_matches[0].replace(" ", "").replace("\xa0", ""))
-                    except:
-                        pass
-
+                            if candidate: score = candidate; break
+                matches = re.findall(r'[Čč]istota.*?(\d[,.]\d)', content)
+                if matches: score_cleanliness = parse_score(matches[0])
+                count_m = re.findall(r'(\d[\d\s]{0,4})\s*(?:recenz|hodnocen|review)', content, re.IGNORECASE)
+                if count_m:
+                    try: review_count = int(count_m[0].replace(" ","").replace("\xa0",""))
+                    except: pass
             except Exception as e:
-                error = str(e)
-                print(f"  ERROR: {e}")
-
+                error = str(e); print(f"  ERROR: {e}")
             print(f"  → score={score}, cleanliness={score_cleanliness}, reviews={review_count}")
-            results.append({
-                "name": apt["name"],
-                "url": apt["url"],
-                "score": score,
-                "score_cleanliness": score_cleanliness,
-                "review_count": review_count,
-                "error": error,
-            })
+            results.append({"name": apt["name"], "url": apt["url"], "score": score, "score_cleanliness": score_cleanliness, "review_count": review_count, "error": error})
             time.sleep(2)
-
         browser.close()
     return results
 
 def main():
-    print(f"Starting scrape at {datetime.utcnow().isoformat()}Z")
+    now = datetime.utcnow().isoformat() + "Z"
+    print(f"Starting scrape at {now}")
     results = scrape_all()
 
-    output = {
-        "scraped_at": datetime.utcnow().isoformat() + "Z",
-        "apartments": results,
+    # Load existing data.json to preserve history
+    existing = {}
+    if os.path.exists("data.json"):
+        with open("data.json", encoding="utf-8") as f:
+            try: existing = json.load(f)
+            except: pass
+
+    history = existing.get("history", [])
+
+    # Add new snapshot
+    new_snapshot = {
+        "scraped_at": now,
+        "apartments": [{"name": a["name"], "url": a["url"], "score": a["score"], "score_cleanliness": a["score_cleanliness"], "review_count": a["review_count"], "error": a["error"]} for a in results]
     }
+    history.append(new_snapshot)
+
+    output = {
+        "scraped_at": now,
+        "apartments": results,
+        "history": history
+    }
+
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"\nDone. Saved {len(results)} apartments to data.json")
+    print(f"\nDone. {len(results)} apartments, {len(history)} snapshots total in history.")
     scored = [a for a in results if a["score"] is not None]
     if scored:
-        avg = sum(a["score"] for a in scored) / len(scored)
-        print(f"Average score: {avg:.2f} ({len(scored)}/{len(results)} successful)")
-    errors = [a for a in results if a["error"]]
-    if errors:
-        print(f"Errors: {[a['name'] for a in errors]}")
+        print(f"Average: {sum(a['score'] for a in scored)/len(scored):.2f} ({len(scored)}/{len(results)} OK)")
 
 if __name__ == "__main__":
     main()
