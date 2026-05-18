@@ -288,8 +288,13 @@ Max 5 issues, česky, stručně. Pokud žádné problémy → issues=[], summary
 def merge_archive(archive, apt_name, new_reviews):
     apt = archive.setdefault(apt_name, {})
     for r in new_reviews:
+        if not isinstance(r, dict):
+            continue
         month = r.get("date") or datetime.utcnow().strftime("%Y-%m")
         month_list = apt.setdefault(month, [])
+        # Filter out any non-dict entries from existing list
+        month_list = [e for e in month_list if isinstance(e, dict)]
+        apt[month] = month_list
         entry = {
             "score": r.get("score"),
             "negative": r.get("negative"),
