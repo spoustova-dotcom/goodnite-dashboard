@@ -406,10 +406,15 @@ function renderArchive(){
           const neg = typeof r === 'object' ? r.negative : r;
           const pos = typeof r === 'object' ? r.positive : null;
           const score = typeof r === 'object' ? r.score : null;
+          const date = typeof r === 'object' ? r.date : null;
           return `<div class="review-text">
-            ${score ? `<span style="font-size:0.7rem;color:var(--accent);margin-right:6px">${score}/10</span>` : ''}
-            ${neg ? `<span style="color:var(--danger)">☹ ${neg}</span>` : ''}
-            ${pos && !neg ? `<span style="color:var(--ok)">☺ ${pos}</span>` : ''}
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+              ${score ? `<span style="font-size:0.7rem;background:rgba(200,169,110,0.15);color:var(--accent);padding:1px 6px;border-radius:10px">${score}/10</span>` : ''}
+              ${date ? `<span style="font-size:0.68rem;color:var(--muted)">${fmtMonth(date)}</span>` : ''}
+            </div>
+            ${neg ? `<div style="color:var(--danger);font-size:0.78rem;line-height:1.5">☹ ${neg}</div>` : ''}
+            ${pos && !neg ? `<div style="color:var(--ok);font-size:0.78rem;line-height:1.5">☺ ${pos}</div>` : ''}
+            ${pos && neg ? `<div style="color:var(--ok);font-size:0.78rem;line-height:1.5;margin-top:4px">☺ ${pos}</div>` : ''}
           </div>`;
         }).join('')}
       </div>
