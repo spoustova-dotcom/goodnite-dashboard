@@ -57,12 +57,12 @@ def scrape_reviews_playwright(page, url, cutoff_date):
         page.goto(reviews_url, wait_until="domcontentloaded", timeout=30000)
         time.sleep(3)
 
-        # Scroll to load reviews
+        # Scroll to reviews section
         for _ in range(4):
             page.evaluate("window.scrollBy(0, 600)")
             time.sleep(0.8)
 
-        # Wait for review content
+        # Wait for review content to load
         try:
             page.wait_for_selector(
                 ".review_list_new_item_block, [data-testid='review-card'], .c-review-block, li.review_item",
@@ -70,7 +70,70 @@ def scrape_reviews_playwright(page, url, cutoff_date):
             )
         except:
             pass
-        time.sleep(2)
+        time.sleep(1)
+
+        # --- Sort by NEWEST first ---
+        sorted_ok = False
+
+        # Method 1: click "Nejnovější" / "Most recent" button or option
+        for label in ["Nejnovější", "Most recent", "Nejnovejsi", "Newest"]:
+            try:
+                el = page.query_selector(f"text='{label}'")
+                if not el:
+                    el = page.query_selector(f"[aria-label*='{label}']")
+                if el:
+                    el.click()
+                    time.sleep(2)
+                    sorted_ok = True
+                    print(f"    Sorted by: {label}")
+                    break
+            except:
+                pass
+
+        # Method 2: find sort select and pick "recent" option
+        if not sorted_ok:
+            for sel in ["select[name='order']", "[data-testid='review-sort-select']", "select.sort_by_select", "select[id*='sort']", "select[class*='sort']"]:
+                try:
+                    el = page.query_selector(sel)
+                    if el:
+                        # Try to select "recent" or similar value
+                        for val in ["recent", "date_desc", "newest", "MOST_RECENT"]:
+                            try:
+                                page.select_option(sel, value=val)
+                                time.sleep(2)
+                                sorted_ok = True
+                                print(f"    Sorted via select: {val}")
+                                break
+                            except:
+                                pass
+                    if sorted_ok:
+                        break
+                except:
+                    pass
+
+        # Method 3: look for sort dropdown and click newest option
+        if not sorted_ok:
+            try:
+                # Find any sort/filter container
+                sort_container = page.query_selector("[data-testid='review-sort'], .review_list_score_breakdown, [class*='sort']")
+                if sort_container:
+                    # Look for clickable options inside
+                    options = sort_container.query_selector_all("option, li, button, a")
+                    for opt in options:
+                        txt = (opt.inner_text() or "").lower()
+                        if any(w in txt for w in ["nejnovější", "recent", "newest", "datum"]):
+                            opt.click()
+                            time.sleep(2)
+                            sorted_ok = True
+                            print(f"    Sorted via container option: {txt}")
+                            break
+            except:
+                pass
+
+        if not sorted_ok:
+            print(f"    Warning: could not sort by newest, using default order")
+
+        time.sleep(1)
 
         # Try to find review blocks using multiple selectors
         block_selectors = [
