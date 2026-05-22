@@ -619,6 +619,7 @@ function render(data){
         ?a.review_issues.map(i=>`<span class="tag">${i}</span>`).join('')
         :`<span class="tag ok">${a.reviews_analyzed>0?'✓ Žádné problémy':'Čeká na analýzu'}</span>`
       }</div>
+      ${a.reviews_analyzed>0?`<div style="font-size:0.68rem;color:var(--muted);margin-top:8px">Analyzováno ${a.reviews_analyzed} recenzí · ${fmtDate(data.scraped_at)}</div>`:''}
     </div>`;
   }).join('');
 
