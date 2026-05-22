@@ -362,6 +362,7 @@ def merge_archive(archive, apt_name, new_reviews):
             "score": r.get("score"),
             "negative": r.get("negative"),
             "positive": r.get("positive"),
+            "date": r.get("date"),  # full YYYY-MM for display
         }
         existing_negs = [e.get("negative") for e in month_list]
         if entry.get("negative") and entry["negative"] not in existing_negs:
