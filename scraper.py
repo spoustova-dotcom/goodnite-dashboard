@@ -147,12 +147,17 @@ def scrape_reviews_playwright(page, url, cutoff_date):
 
                 # Get positive text
                 pos = None
-                for sel in [".c-review__body--positive", ".review_pos .review_body", "[data-testid='review-positive-text']", ".review_pos"]:
+                for sel in [
+                    ".c-review__body--positive",
+                    "[data-testid='review-positive-text']",
+                    ".review_pos .review_body",
+                    ".review_pos",
+                ]:
                     try:
                         el = block.query_selector(sel)
                         if el:
                             t = el.inner_text().strip()
-                            if len(t) > 10:
+                            if 10 < len(t) < 1000:
                                 pos = t
                                 break
                     except:
@@ -160,29 +165,90 @@ def scrape_reviews_playwright(page, url, cutoff_date):
 
                 # Get negative text
                 neg = None
-                for sel in [".c-review__body--negative", ".review_neg .review_body", "[data-testid='review-negative-text']", ".review_neg"]:
+                for sel in [
+                    ".c-review__body--negative",
+                    "[data-testid='review-negative-text']",
+                    ".review_neg .review_body",
+                    ".review_neg",
+                ]:
                     try:
                         el = block.query_selector(sel)
                         if el:
                             t = el.inner_text().strip()
-                            if len(t) > 10:
+                            if 10 < len(t) < 1000:
                                 neg = t
                                 break
                     except:
                         pass
 
-                # Fallback: get any review text from block
+                # Booking uses aria-label="Hodnocení" div containing all review text
+                # with ☺ and ☹ emoji to indicate positive/negative
                 if not pos and not neg:
-                    for sel in [".c-review__body", ".a53cbfa6de", ".review_item_review_content", ".bui-review__text"]:
+                    try:
+                        review_div = block.query_selector("div[aria-label='Hodnocení'], div[role='group'][aria-label]")
+                        if not review_div:
+                            review_div = block
+                        
+                        # Get all list items or divs with text
+                        items = review_div.query_selector_all("li, .f6e3a11b0d, [class*='f6e3a11b0d']")
+                        if not items:
+                            items = review_div.query_selector_all("span, div")
+                        
+                        for item in items:
+                            try:
+                                t = item.inner_text().strip()
+                                if len(t) < 15 or len(t) > 800:
+                                    continue
+                                # Skip if contains children with text (avoid duplicates)
+                                if "☺" in t or "Líbilo" in t or "Kladné" in t:
+                                    pos = t.replace("☺", "").replace("Líbilo se:", "").strip()
+                                elif "☹" in t or "Nelíbilo" in t or "Záporné" in t:
+                                    neg = t.replace("☹", "").replace("Nelíbilo se:", "").strip()
+                            except:
+                                pass
+                        
+                        # If still nothing, just grab the text content of the block
+                        if not pos and not neg:
+                            full_text = review_div.inner_text().strip()
+                            # Split by emoji if present
+                            if "☺" in full_text and "☹" in full_text:
+                                parts = full_text.split("☹")
+                                pos_part = parts[0].replace("☺", "").strip()
+                                neg_part = parts[1].strip() if len(parts) > 1 else ""
+                                if 10 < len(pos_part) < 800: pos = pos_part
+                                if 10 < len(neg_part) < 800: neg = neg_part
+                            elif "☺" in full_text:
+                                t = full_text.replace("☺", "").strip()
+                                if 10 < len(t) < 800: pos = t
+                            elif "☹" in full_text:
+                                t = full_text.replace("☹", "").strip()
+                                if 10 < len(t) < 800: neg = t
+                    except:
+                        pass
+
+                # Fallback: get any review text from block - but limit length to avoid grabbing entire page section
+                if not pos and not neg:
+                    for sel in [".c-review__body", ".review_item_review_content", ".bui-review__text"]:
                         try:
                             el = block.query_selector(sel)
                             if el:
                                 t = el.inner_text().strip()
-                                if len(t) > 20:
+                                # Max 500 chars to avoid grabbing entire sections
+                                if 20 < len(t) < 500:
                                     neg = t
                                     break
                         except:
                             pass
+
+                # Last resort: get all text from block but split smartly
+                if not pos and not neg:
+                    try:
+                        t = block.inner_text().strip()
+                        # Only use if reasonably sized (single review)
+                        if 20 < len(t) < 600:
+                            neg = t
+                    except:
+                        pass
 
                 # Get score
                 score = None
