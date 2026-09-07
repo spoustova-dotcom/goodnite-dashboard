@@ -1,25 +1,25 @@
 {
-  "scraped_at": "2026-08-31T12:16:18.387660Z",
+  "scraped_at": "2026-09-07T11:08:31.802866Z",
   "apartments": [
     {
       "name": "Enjoy Downtown 12 (SB12)",
       "url": "https://www.booking.com/hotel/cz/enjoy-downtown-boutique-apartments-12-by-goodnite-cz.cs.html",
       "score": 8.6,
       "score_cleanliness": 9.1,
-      "review_count": 401,
+      "review_count": 405,
       "error": null,
       "review_issues": [
-        "Hluk ze restaurace/hospody v nižších patrech a ze dvora do noci",
-        "Problémy s přístupovým kódem vyžadující denní kontakt s recepcí",
-        "Cizí vlasy v koupelně a pokoji",
-        "Zamčené dveře na balkon limitující větrání v létě",
-        "Hluk z chodby/schodiště (holubi)"
+        "Hluk z restaurace pod ubytováním a hospody ve dvoře, zejména do 23:00",
+        "Ограниченá možnost větrání - balkonové dveře zamčené, lze otevřít jen malé okénko",
+        "Občasné problémy s čistotou - cizí vlasy v pokoji a koupelně",
+        "Selhávající přístupový kód vyžadující denní resetování na recepci",
+        "Tvrdá postel a chladno v noci v pavlačovém bytě"
       ],
-      "review_summary": "Hlavními problémy jsou hluk z podniků v nižších patrech a dvoře otevřený až do noci, dále problémy s přístupovým kódem a občasné nedostatky v čistotě.",
+      "review_summary": "Hlavními problémy jsou hluk z přilehlých podniků a restaurací, zejména do pozdních večerních hodin, a problémy s větráním pokojů. Menší problémy se týkají čistoty a přístupového kódu.",
       "issue_counts": {
         "Vůně": 0,
-        "Čistota": 2,
-        "Hluk": 4,
+        "Čistota": 1,
+        "Hluk": 3,
         "Údržba/vybavení": 2,
         "Komunikace": 1,
         "Parkování": 0,
@@ -32,7 +32,7 @@
       "url": "https://www.booking.com/hotel/cz/enjoy-downtown-apartments.cs.html",
       "score": 9.3,
       "score_cleanliness": 9.5,
-      "review_count": 562,
+      "review_count": 560,
       "error": null,
       "review_issues": [],
       "review_summary": null,
@@ -52,21 +52,22 @@
       "url": "https://www.booking.com/hotel/cz/apartments-zelny-trh-brno.cs.html",
       "score": 9.1,
       "score_cleanliness": 9.4,
-      "review_count": 789,
+      "review_count": 792,
       "error": null,
       "review_issues": [
-        "Klimatizace nešla vypnout",
+        "Klimatizace se nedala vypnout",
+        "Poškozené zrcadlo v koupelně",
         "Problém s kódem u vstupních dveří",
-        "Zrcadlo v koupelně potřebuje opravu",
-        "Hluk z ulice a domu v noci"
+        "Hluk z ulice a z domu v noci",
+        "Chybí myčka v kuchyni"
       ],
-      "review_summary": "Hlavní problémy se týkají údržby klimatizace, která nešla vypnout, a přístupových kódů u dveří. Menší nedostatky včetně zrcadla v koupelně a hluku.",
+      "review_summary": "Hlavní problémy se týkají technických závad a hluku. Nejčastěji jsou zmiňovány poruchy klimatizace, zrcadla a přístupového kódu.",
       "issue_counts": {
         "Vůně": 0,
         "Čistota": 0,
         "Hluk": 1,
-        "Údržba/vybavení": 3,
-        "Komunikace": 1,
+        "Údržba/vybavení": 4,
+        "Komunikace": 0,
         "Parkování": 0,
         "Jiné": 0
       },
@@ -77,12 +78,12 @@
       "url": "https://www.booking.com/hotel/cz/president-mezonet-apartment-brno.cs.html",
       "score": 8.7,
       "score_cleanliness": 9.1,
-      "review_count": 397,
+      "review_count": 398,
       "error": null,
       "review_issues": [
-        "Hluk z kostelního zvonu v 5:00 ráno"
+        "Hluk ze zvonu kostela v 5:00 ráno"
       ],
-      "review_summary": "Hlavním problémem je hluk z kostelního zvonu zvonícího v brzké ranní době (5:00), který ruší spaní hostů.",
+      "review_summary": "Hlavním problémem je hluk ze zvonu místního kostela, který hosty budí v brzkých ranních hodinách.",
       "issue_counts": {
         "Vůně": 0,
         "Čistota": 0,
@@ -99,22 +100,22 @@
       "url": "https://www.booking.com/hotel/cz/coco-chanel-boutique-apartment.cs.html",
       "score": 9.2,
       "score_cleanliness": 9.4,
-      "review_count": 164,
+      "review_count": 165,
       "error": null,
       "review_issues": [
-        "Absence výtahu na 3. patře",
-        "Omezená kapacita pokoje - více než 2 osoby musí spát v obývacím pokoji",
-        "Chybí velké zrcadlo"
+        "Chybí výtah na 3. patro",
+        "Nedostatečná kapacita pokoje pro více než 2 osoby",
+        "Absence velkého zrcadla"
       ],
-      "review_summary": "Ubytování se nachází na 3. patře bez výtahu a menší pokoje neumožňují pohodlné ubytování pro více než 2 osoby. Chybí také větší zrcadlo v koupelně.",
+      "review_summary": "Ubytování se nachází na 3. patře bez výtahu, což může být problematické pro hosty. Limitovaná kapacita pokoje pro více než 2 osoby, kdy se další hosté musí ubytovat na rozkládací sedačce v obývacím pokoji.",
       "issue_counts": {
         "Vůně": 0,
         "Čistota": 0,
         "Hluk": 0,
-        "Údržba/vybavení": 3,
+        "Údržba/vybavení": 2,
         "Komunikace": 0,
         "Parkování": 0,
-        "Jiné": 0
+        "Jiné": 1
       },
       "reviews_analyzed": 4
     },
@@ -126,13 +127,12 @@
       "review_count": 12,
       "error": null,
       "review_issues": [
-        "Výtahy vypínány v určitých hodinách, nucená chůze po schodech se zavazadly",
-        "Klíče nedostupné v uvedeném čase, host zůstal na ulici uprostřed noci",
-        "Zcela přerušená komunikace po zaplacení - žádné odpovědi na zprávy, emaily, telefony",
-        "Podezření na scam - provozovatel zmizel na několik dní",
-        "Booking.com odmítl pomoci s refundací, protože provozovatel nereaguje"
+        "Nefunkční výtahy - časté vypínání, nucení používat schody s bagáží",
+        "Selhání komunikace - majitel neodpovídal na zprávy, telefony, emaily po zaplacení",
+        "Nedostupnost při check-inu - klíčovna zavřena, host se nemohl ubytovat",
+        "Neexistence podpory - Booking.com nedokázal pomoci s refundací"
       ],
-      "review_summary": "Nejzávažnější problémy jsou nefunkční výtahy vyžadující chůzi po schodech a especially kritická situace s nedostupností při check-inu a následující komunikační selhání provozovatele.",
+      "review_summary": "Dva vážné problémy: nefunkční výtahy vyžadující nošení zavazadel po schodech a zcela selhavající komunikace s nedostupností ubytování při příjezdu.",
       "issue_counts": {
         "Vůně": 0,
         "Čistota": 0,
@@ -149,13 +149,13 @@
       "url": "https://www.booking.com/hotel/cz/boutique-chill-apartments-br-no-11.cs.html",
       "score": 8.5,
       "score_cleanliness": 8.9,
-      "review_count": 433,
+      "review_count": 430,
       "error": null,
       "review_issues": [
-        "Rozbitě žaluzzie v koupelně, které se nedají zatáhnout",
-        "Mírný hluk ze sousedních pokojů"
+        "Rozbitá zařízení - nefungující zařízení v koupelně (žaluzie)",
+        "Hluk ze sousedních pokojů"
       ],
-      "review_summary": "Ubytování má minimální problémy. Hlavním problémem jsou rozbitě žaluzzie v koupelně a mírný hluk ze sousedních pokojů.",
+      "review_summary": "Ubytování má minimální problémy. Hlavními negativy jsou rozbitý zámek na žalusie v koupelně a občasný hluk ze sousedních pokojů.",
       "issue_counts": {
         "Vůně": 0,
         "Čistota": 0,
@@ -172,16 +172,16 @@
       "url": "https://www.booking.com/hotel/cz/boutique-city-apartments-br-no-47.cs.html",
       "score": 8.0,
       "score_cleanliness": 8.8,
-      "review_count": 335,
+      "review_count": 334,
       "error": null,
       "review_issues": [
-        "Vysoký hluk z ulice, ztížená komunikace",
-        "Nemožnost větrání bytu",
-        "Tenké peřiny a nedostatečné teplo",
-        "Sdílená koupelna a kuchyně nejsou jasně uvedeny v popisu",
-        "Problémy s parkováním"
+        "Hluk z ulice - při průjezdu aut není slyšet vlastního slova",
+        "Špatné větrání a horko v místnosti",
+        "Tenké peřiny a nedostatečné topení v noci",
+        "Nejasný popis - sdílená koupelna a kuchyně nejsou zřetelně zvýrazněny",
+        "Problém s parkováním"
       ],
-      "review_summary": "Hlavními problémy jsou vysoký hluk z ulice, nemožnost větrání kvůli hlučnosti, tenké peřiny způsobující zimu v noci a chybějící jasné informace o sdíleném vybavení.",
+      "review_summary": "Ubytování trpí problémem s hlukem z ulice, nedostatečným větráním, špatným topením a nejasným popisem sdílených prostor. Parkování je také problematické.",
       "issue_counts": {
         "Vůně": 0,
         "Čistota": 0,
@@ -198,44 +198,44 @@
       "url": "https://www.booking.com/hotel/cz/old-town-apartment-spilberk.cs.html",
       "score": 8.2,
       "score_cleanliness": 8.7,
-      "review_count": 127,
+      "review_count": 124,
       "error": null,
       "review_issues": [
-        "Byt v 4. patře bez výtahu",
-        "Obtížný přístup pro lidi se sníženou mobilitou"
+        "4. patro bez výtahu - problém pro méně fit osoby",
+        "Nepříjemná vůně ze WC"
       ],
-      "review_summary": "Hlavním problémem je umístění bytu ve 4. patře bez výtahu, což může být nepraktické pro méně fyzicky zdatné hosty.",
+      "review_summary": "Hlavními problémy jsou absence výtahu v čtvrtém patře, což může být problematické pro méně pohyblivé hosty, a hygienické problémy se záchodem.",
       "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
+        "Vůně": 1,
+        "Čistota": 1,
         "Hluk": 0,
         "Údržba/vybavení": 1,
         "Komunikace": 0,
         "Parkování": 0,
-        "Jiné": 1
+        "Jiné": 0
       },
-      "reviews_analyzed": 2
+      "reviews_analyzed": 3
     },
     {
       "name": "Expo Living 33",
       "url": "https://www.booking.com/hotel/cz/expo-living-33.cs.html",
       "score": 8.6,
       "score_cleanliness": 9.1,
-      "review_count": 1227,
+      "review_count": 1222,
       "error": null,
       "review_issues": [
-        "Chybí klimatizace, extrémní teplo v pokoji",
-        "Nefungující Wi-Fi a televize, problémy s údržbou",
-        "Špatná dostupnost recepce, neresponsivní komunikace",
-        "Nejasná cenotvorba, chyby na faktuře, zdvojnásobení ceny",
-        "Drahé parkování (40 Kč/h) a hlučné umístění v přízemí u silnice"
+        "Absence klimatizace, výrazné teplo v pokoji",
+        "Nefunkční Wi-Fi, potřeba koupit mobilní data",
+        "Nejasné a nespravedlivé zvýšení ceny při prodloužení pobytu",
+        "Pomalá a nespolehlivá komunikace recepce (telefon, WhatsApp)",
+        "Vysoké parkování (40 Kč/hod) a nefunkční televize"
       ],
-      "review_summary": "Ubytování trpí nedostatečným vybavením (chybí klimatizace, nefunguje Wi-Fi a televize), problémy s komunikací recepce a nejasnou cenotvorbou. Hosté také kritizují umístění pokojů a drahé parkování.",
+      "review_summary": "Ubytování trápí technické problémy (chybějící klimatizace, nefunkční Wi-Fi a televize), nejasnosti v ceníku a komunikaci při prodloužení pobytu a špatná dostupnost recepce.",
       "issue_counts": {
         "Vůně": 0,
         "Čistota": 0,
-        "Hluk": 1,
-        "Údržba/vybavení": 3,
+        "Hluk": 0,
+        "Údržba/vybavení": 4,
         "Komunikace": 2,
         "Parkování": 1,
         "Jiné": 1
@@ -247,12 +247,12 @@
       "url": "https://www.booking.com/hotel/cz/veletrzni-boutique-apartments.cs.html",
       "score": 7.9,
       "score_cleanliness": 8.6,
-      "review_count": 632,
+      "review_count": 631,
       "error": null,
       "review_issues": [
         "Hluk od ostatních hostů"
       ],
-      "review_summary": "Hosté si stěžují na hluk od ostatních hostů během pobytu.",
+      "review_summary": "Jedinou zmíněnou potíží byla zvýšená hlučnost způsobená ostatními hosty v době pobytu.",
       "issue_counts": {
         "Vůně": 0,
         "Čistota": 0,
@@ -269,23 +269,24 @@
       "url": "https://www.booking.com/hotel/cz/botanica-by-goodnite-cz.cs.html",
       "score": 8.7,
       "score_cleanliness": 9.2,
-      "review_count": 1063,
+      "review_count": 1089,
       "error": null,
       "review_issues": [
-        "Chybějící klimatizace - pokoje velmi horké v létě",
+        "Absence klimatizace a nedostatečné chlazení pokojů",
+        "Hluk z ochlazovačů vzduchu znesnadňující usnutí",
+        "Špatné čistoty - nepříjemné vůně v koupelně",
         "Chybějící výtah",
-        "Bezpečnostní problémy - přístup ke střešnímu patru bez mříží",
-        "Absence recepce a pomalá komunikace - čekání 2 týdny na fakturu"
+        "Slabá komunikace a čekání 2 týdny na fakturu"
       ],
-      "review_summary": "Hlavními problémy jsou chybějící klimatizace, která činí pobyt v horkých dnech velmi nepříjemným, a absence výtahu. Hosté také zmiňují problémy s bezpečností přístupu do pokojů a pomalou komunikaci při vyřizování faktury.",
+      "review_summary": "Hlavními problémy jsou absence klimatizace a nedostatečné chlazení pokojů v horkých dnech, hluk z větráků a problémy s údržbou koupelny. Hosté také hlásí špatnou komunikaci s recepcí a chybějící výtah.",
       "issue_counts": {
-        "Vůně": 0,
-        "Čistota": 0,
-        "Hluk": 0,
-        "Údržba/vybavení": 4,
+        "Vůně": 1,
+        "Čistota": 1,
+        "Hluk": 2,
+        "Údržba/vybavení": 3,
         "Komunikace": 1,
         "Parkování": 0,
-        "Jiné": 1
+        "Jiné": 0
       },
       "reviews_analyzed": 10
     },
@@ -294,24 +295,22 @@
       "url": "https://www.booking.com/hotel/cz/riverside-by-goodnite.cs.html",
       "score": 8.5,
       "score_cleanliness": 9.0,
-      "review_count": 1663,
+      "review_count": 1700,
       "error": null,
       "review_issues": [
-        "Nedostatečné chlazení - absence klimatizace, větrák pouze rozháněl teplý vzduch",
-        "Malý pokoj - nedostatek místa pro uložení věcí",
-        "Nefunkční televize - nastavena v cizím jazyce, nepodařilo se ji zprovoznit",
-        "Špatná větrací možnost - okna se nezatáhla správně, pokoj se nedal vyvětrat",
-        "Omezení streamovacích služeb - Netflix přehrával jen čtyřem uživatelům najednou"
+        "Malý pokoj bez místa na zavazadla",
+        "Netflix dostupný pouze pro 4 uživatele současně",
+        "Příliš intenzivní vůně v pokoji"
       ],
-      "review_summary": "Hlavními problémy jsou nedostatečné klimatizační zařízení, malý pokoj a nefunkční či obtížně ovladatelná elektronika.",
+      "review_summary": "Hlavními problémy jsou malý prostor na pokoji a omezená kapacita Netflix účtu. Některých hostů také obtěžuje intenzivní vůně v pokoji.",
       "issue_counts": {
-        "Vůně": 0,
+        "Vůně": 2,
         "Čistota": 0,
         "Hluk": 0,
-        "Údržba/vybavení": 4,
+        "Údržba/vybavení": 2,
         "Komunikace": 0,
         "Parkování": 0,
-        "Jiné": 1
+        "Jiné": 0
       },
       "reviews_analyzed": 10
     },
@@ -319,17 +318,16 @@
       "name": "Penzion u Libušky",
       "url": "https://www.booking.com/hotel/cz/penzion-u-libusky-29-brno-living-cz.cs.html",
       "score": 8.0,
-      "score_cleanliness": 8.7,
-      "review_count": 1809,
+      "score_cleanliness": 8.6,
+      "review_count": 1789,
       "error": null,
       "review_issues": [
-        "Hluk z hlavní silnice a přilehlých pokojů",
-        "Nedostatečné chlazení pokojů v létě",
-        "Nefunkční TV a programy",
-        "Špinavé nádobí a obaly na chodbě",
-        "Špatná údržba společných prostor"
+        "Hluk ze silnice a sousedních pokojů",
+        "Vysoké teploty v pokojích, absence klimatizace",
+        "Nedostatečná čistota (nádobí na chodbě, obaly od jídla)",
+        "Nefunkční televize v pokojích"
       ],
-      "review_summary": "Hlavní problémy jsou nadměrný hluk z ulice a nedostatečné chlazení pokojů v létě. Součástí stížností jsou také technické problémy s TV a nedostatečná čistota společných prostor.",
+      "review_summary": "Hlavními problémy penziónu jsou intenzivní hluk ze silnice a nedostatečné klimatizování. Hosté také upozorňují na problémy s čistotou a nefunkčním televizním vybavením.",
       "issue_counts": {
         "Vůně": 0,
         "Čistota": 1,
@@ -337,7 +335,7 @@
         "Údržba/vybavení": 2,
         "Komunikace": 0,
         "Parkování": 0,
-        "Jiné": 0
+        "Jiné": 1
       },
       "reviews_analyzed": 9
     },
@@ -346,20 +344,19 @@
       "url": "https://www.booking.com/hotel/cz/modern-panorama-residence.cs.html",
       "score": 8.5,
       "score_cleanliness": 8.8,
-      "review_count": 17,
+      "review_count": 19,
       "error": null,
       "review_issues": [
-        "Hluk ze ulice a od lidí v centru",
-        "Chybí klimatizace nebo větrák",
-        "Nefunkční kód na otevření dveří",
-        "Nejasné pokyny pro vstup do bytu",
-        "Bezpečnostní obavy v lokalitě"
+        "Chybí klimatizace nebo ventilátor, nucené větrání způsobuje hluk z ulice",
+        "Silný hluk z centra města a od lidí na ulici",
+        "Nejasné instrukce k přihlášení a problém se kódem na otevření klíčů",
+        "Obavy o bezpečnost v okolí"
       ],
-      "review_summary": "Hlavními problémy jsou hluk ze streets a centra města, absence klimatizace/ventilátoru, nefunkční přístupový kód a nejasné instrukce pro check-in.",
+      "review_summary": "Hlavními problémy jsou chybějící klimatizace způsobující nucené větrání a následný silný hluk z ulice, nejasná komunikace při přihlášení a obavy o bezpečnost v lokalitě.",
       "issue_counts": {
         "Vůně": 1,
         "Čistota": 0,
-        "Hluk": 3,
+        "Hluk": 2,
         "Údržba/vybavení": 2,
         "Komunikace": 1,
         "Parkování": 0,
@@ -7439,6 +7436,359 @@
           "review_summary": "Hlavními problémy jsou hluk ze streets a centra města, absence klimatizace/ventilátoru, nefunkční přístupový kód a nejasné instrukce pro check-in."
         }
       ]
+    },
+    {
+      "scraped_at": "2026-09-07T11:08:31.802866Z",
+      "apartments": [
+        {
+          "name": "Enjoy Downtown 12 (SB12)",
+          "url": "https://www.booking.com/hotel/cz/enjoy-downtown-boutique-apartments-12-by-goodnite-cz.cs.html",
+          "score": 8.6,
+          "score_cleanliness": 9.1,
+          "review_count": 405,
+          "error": null,
+          "review_issues": [
+            "Hluk z restaurace pod ubytováním a hospody ve dvoře, zejména do 23:00",
+            "Ограниченá možnost větrání - balkonové dveře zamčené, lze otevřít jen malé okénko",
+            "Občasné problémy s čistotou - cizí vlasy v pokoji a koupelně",
+            "Selhávající přístupový kód vyžadující denní resetování na recepci",
+            "Tvrdá postel a chladno v noci v pavlačovém bytě"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 1,
+            "Hluk": 3,
+            "Údržba/vybavení": 2,
+            "Komunikace": 1,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Hlavními problémy jsou hluk z přilehlých podniků a restaurací, zejména do pozdních večerních hodin, a problémy s větráním pokojů. Menší problémy se týkají čistoty a přístupového kódu."
+        },
+        {
+          "name": "Enjoy Downtown 13 (SB13)",
+          "url": "https://www.booking.com/hotel/cz/enjoy-downtown-apartments.cs.html",
+          "score": 9.3,
+          "score_cleanliness": 9.5,
+          "review_count": 560,
+          "error": null,
+          "review_issues": [],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 0,
+            "Údržba/vybavení": 0,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": null
+        },
+        {
+          "name": "Enjoy Downtown – Zelný trh",
+          "url": "https://www.booking.com/hotel/cz/apartments-zelny-trh-brno.cs.html",
+          "score": 9.1,
+          "score_cleanliness": 9.4,
+          "review_count": 792,
+          "error": null,
+          "review_issues": [
+            "Klimatizace se nedala vypnout",
+            "Poškozené zrcadlo v koupelně",
+            "Problém s kódem u vstupních dveří",
+            "Hluk z ulice a z domu v noci",
+            "Chybí myčka v kuchyni"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 1,
+            "Údržba/vybavení": 4,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Hlavní problémy se týkají technických závad a hluku. Nejčastěji jsou zmiňovány poruchy klimatizace, zrcadla a přístupového kódu."
+        },
+        {
+          "name": "Prezidentský mezonet",
+          "url": "https://www.booking.com/hotel/cz/president-mezonet-apartment-brno.cs.html",
+          "score": 8.7,
+          "score_cleanliness": 9.1,
+          "review_count": 398,
+          "error": null,
+          "review_issues": [
+            "Hluk ze zvonu kostela v 5:00 ráno"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 1,
+            "Údržba/vybavení": 0,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Hlavním problémem je hluk ze zvonu místního kostela, který hosty budí v brzkých ranních hodinách."
+        },
+        {
+          "name": "Coco Chanel Boutique",
+          "url": "https://www.booking.com/hotel/cz/coco-chanel-boutique-apartment.cs.html",
+          "score": 9.2,
+          "score_cleanliness": 9.4,
+          "review_count": 165,
+          "error": null,
+          "review_issues": [
+            "Chybí výtah na 3. patro",
+            "Nedostatečná kapacita pokoje pro více než 2 osoby",
+            "Absence velkého zrcadla"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 0,
+            "Údržba/vybavení": 2,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 1
+          },
+          "review_summary": "Ubytování se nachází na 3. patře bez výtahu, což může být problematické pro hosty. Limitovaná kapacita pokoje pro více než 2 osoby, kdy se další hosté musí ubytovat na rozkládací sedačce v obývacím pokoji."
+        },
+        {
+          "name": "Panorama Apartment",
+          "url": "https://www.booking.com/hotel/cz/panorama-apartment-by-goodnite-cz.cs.html",
+          "score": 9.0,
+          "score_cleanliness": 9.3,
+          "review_count": 12,
+          "error": null,
+          "review_issues": [
+            "Nefunkční výtahy - časté vypínání, nucení používat schody s bagáží",
+            "Selhání komunikace - majitel neodpovídal na zprávy, telefony, emaily po zaplacení",
+            "Nedostupnost při check-inu - klíčovna zavřena, host se nemohl ubytovat",
+            "Neexistence podpory - Booking.com nedokázal pomoci s refundací"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 0,
+            "Údržba/vybavení": 1,
+            "Komunikace": 3,
+            "Parkování": 0,
+            "Jiné": 1
+          },
+          "review_summary": "Dva vážné problémy: nefunkční výtahy vyžadující nošení zavazadel po schodech a zcela selhavající komunikace s nedostupností ubytování při příjezdu."
+        },
+        {
+          "name": "Great Chill (Králova 11)",
+          "url": "https://www.booking.com/hotel/cz/boutique-chill-apartments-br-no-11.cs.html",
+          "score": 8.5,
+          "score_cleanliness": 8.9,
+          "review_count": 430,
+          "error": null,
+          "review_issues": [
+            "Rozbitá zařízení - nefungující zařízení v koupelně (žaluzie)",
+            "Hluk ze sousedních pokojů"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 1,
+            "Údržba/vybavení": 1,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Ubytování má minimální problémy. Hlavními negativy jsou rozbitý zámek na žalusie v koupelně a občasný hluk ze sousedních pokojů."
+        },
+        {
+          "name": "Orange Glow (Šilingrovo 47)",
+          "url": "https://www.booking.com/hotel/cz/boutique-city-apartments-br-no-47.cs.html",
+          "score": 8.0,
+          "score_cleanliness": 8.8,
+          "review_count": 334,
+          "error": null,
+          "review_issues": [
+            "Hluk z ulice - při průjezdu aut není slyšet vlastního slova",
+            "Špatné větrání a horko v místnosti",
+            "Tenké peřiny a nedostatečné topení v noci",
+            "Nejasný popis - sdílená koupelna a kuchyně nejsou zřetelně zvýrazněny",
+            "Problém s parkováním"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 1,
+            "Údržba/vybavení": 2,
+            "Komunikace": 1,
+            "Parkování": 1,
+            "Jiné": 0
+          },
+          "review_summary": "Ubytování trpí problémem s hlukem z ulice, nedostatečným větráním, špatným topením a nejasným popisem sdílených prostor. Parkování je také problematické."
+        },
+        {
+          "name": "Old Town Špilberk",
+          "url": "https://www.booking.com/hotel/cz/old-town-apartment-spilberk.cs.html",
+          "score": 8.2,
+          "score_cleanliness": 8.7,
+          "review_count": 124,
+          "error": null,
+          "review_issues": [
+            "4. patro bez výtahu - problém pro méně fit osoby",
+            "Nepříjemná vůně ze WC"
+          ],
+          "issue_counts": {
+            "Vůně": 1,
+            "Čistota": 1,
+            "Hluk": 0,
+            "Údržba/vybavení": 1,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Hlavními problémy jsou absence výtahu v čtvrtém patře, což může být problematické pro méně pohyblivé hosty, a hygienické problémy se záchodem."
+        },
+        {
+          "name": "Expo Living 33",
+          "url": "https://www.booking.com/hotel/cz/expo-living-33.cs.html",
+          "score": 8.6,
+          "score_cleanliness": 9.1,
+          "review_count": 1222,
+          "error": null,
+          "review_issues": [
+            "Absence klimatizace, výrazné teplo v pokoji",
+            "Nefunkční Wi-Fi, potřeba koupit mobilní data",
+            "Nejasné a nespravedlivé zvýšení ceny při prodloužení pobytu",
+            "Pomalá a nespolehlivá komunikace recepce (telefon, WhatsApp)",
+            "Vysoké parkování (40 Kč/hod) a nefunkční televize"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 0,
+            "Údržba/vybavení": 4,
+            "Komunikace": 2,
+            "Parkování": 1,
+            "Jiné": 1
+          },
+          "review_summary": "Ubytování trápí technické problémy (chybějící klimatizace, nefunkční Wi-Fi a televize), nejasnosti v ceníku a komunikaci při prodloužení pobytu a špatná dostupnost recepce."
+        },
+        {
+          "name": "Expo Dream Veletržní",
+          "url": "https://www.booking.com/hotel/cz/veletrzni-boutique-apartments.cs.html",
+          "score": 7.9,
+          "score_cleanliness": 8.6,
+          "review_count": 631,
+          "error": null,
+          "review_issues": [
+            "Hluk od ostatních hostů"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 0,
+            "Hluk": 1,
+            "Údržba/vybavení": 0,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Jedinou zmíněnou potíží byla zvýšená hlučnost způsobená ostatními hosty v době pobytu."
+        },
+        {
+          "name": "Botanica by Goodnite",
+          "url": "https://www.booking.com/hotel/cz/botanica-by-goodnite-cz.cs.html",
+          "score": 8.7,
+          "score_cleanliness": 9.2,
+          "review_count": 1089,
+          "error": null,
+          "review_issues": [
+            "Absence klimatizace a nedostatečné chlazení pokojů",
+            "Hluk z ochlazovačů vzduchu znesnadňující usnutí",
+            "Špatné čistoty - nepříjemné vůně v koupelně",
+            "Chybějící výtah",
+            "Slabá komunikace a čekání 2 týdny na fakturu"
+          ],
+          "issue_counts": {
+            "Vůně": 1,
+            "Čistota": 1,
+            "Hluk": 2,
+            "Údržba/vybavení": 3,
+            "Komunikace": 1,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Hlavními problémy jsou absence klimatizace a nedostatečné chlazení pokojů v horkých dnech, hluk z větráků a problémy s údržbou koupelny. Hosté také hlásí špatnou komunikaci s recepcí a chybějící výtah."
+        },
+        {
+          "name": "Riverside by Goodnite",
+          "url": "https://www.booking.com/hotel/cz/riverside-by-goodnite.cs.html",
+          "score": 8.5,
+          "score_cleanliness": 9.0,
+          "review_count": 1700,
+          "error": null,
+          "review_issues": [
+            "Malý pokoj bez místa na zavazadla",
+            "Netflix dostupný pouze pro 4 uživatele současně",
+            "Příliš intenzivní vůně v pokoji"
+          ],
+          "issue_counts": {
+            "Vůně": 2,
+            "Čistota": 0,
+            "Hluk": 0,
+            "Údržba/vybavení": 2,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 0
+          },
+          "review_summary": "Hlavními problémy jsou malý prostor na pokoji a omezená kapacita Netflix účtu. Některých hostů také obtěžuje intenzivní vůně v pokoji."
+        },
+        {
+          "name": "Penzion u Libušky",
+          "url": "https://www.booking.com/hotel/cz/penzion-u-libusky-29-brno-living-cz.cs.html",
+          "score": 8.0,
+          "score_cleanliness": 8.6,
+          "review_count": 1789,
+          "error": null,
+          "review_issues": [
+            "Hluk ze silnice a sousedních pokojů",
+            "Vysoké teploty v pokojích, absence klimatizace",
+            "Nedostatečná čistota (nádobí na chodbě, obaly od jídla)",
+            "Nefunkční televize v pokojích"
+          ],
+          "issue_counts": {
+            "Vůně": 0,
+            "Čistota": 1,
+            "Hluk": 3,
+            "Údržba/vybavení": 2,
+            "Komunikace": 0,
+            "Parkování": 0,
+            "Jiné": 1
+          },
+          "review_summary": "Hlavními problémy penziónu jsou intenzivní hluk ze silnice a nedostatečné klimatizování. Hosté také upozorňují na problémy s čistotou a nefunkčním televizním vybavením."
+        },
+        {
+          "name": "Sky Apartments Vlhká",
+          "url": "https://www.booking.com/hotel/cz/modern-panorama-residence.cs.html",
+          "score": 8.5,
+          "score_cleanliness": 8.8,
+          "review_count": 19,
+          "error": null,
+          "review_issues": [
+            "Chybí klimatizace nebo ventilátor, nucené větrání způsobuje hluk z ulice",
+            "Silný hluk z centra města a od lidí na ulici",
+            "Nejasné instrukce k přihlášení a problém se kódem na otevření klíčů",
+            "Obavy o bezpečnost v okolí"
+          ],
+          "issue_counts": {
+            "Vůně": 1,
+            "Čistota": 0,
+            "Hluk": 2,
+            "Údržba/vybavení": 2,
+            "Komunikace": 1,
+            "Parkování": 0,
+            "Jiné": 1
+          },
+          "review_summary": "Hlavními problémy jsou chybějící klimatizace způsobující nucené větrání a následný silný hluk z ulice, nejasná komunikace při přihlášení a obavy o bezpečnost v lokalitě."
+        }
+      ]
     }
   ],
   "reviews_archive": {
@@ -8728,6 +9078,20 @@
           "positive": "Příjemné prostředí, milý personál, bohatá snídaně:)",
           "date": "2026-08"
         }
+      ],
+      "2026-09": [
+        {
+          "score": 9.0,
+          "negative": "Horko, na pokoji byly ochlazovače vzduchu, které ale nejsou přirozeně zcela tiché, takže pro někoho může být problém u nich usnout.",
+          "positive": "Moc hezké prostředí, fajn lokalita (relativně klidná). Velmi hezké pokoje a interiéry. Skvělá snídaně, milý personál. Super brožurka se zajímavými místy v okolí a tipy na restaurace/bary.",
+          "date": "2026-09"
+        },
+        {
+          "score": 10.0,
+          "negative": "Pokoj v 5. patře pod střechou v teplém letním dni je opravdu velmi vyhřátý. Šly cítit odpady v koupelně.",
+          "positive": "Příjemný hotel v dobré lokalitě. Moc doporučuji.",
+          "date": "2026-09"
+        }
       ]
     },
     "Riverside by Goodnite": {
@@ -9066,6 +9430,38 @@
           "negative": null,
           "positive": "Příjemný pobyt v klidné lokalitě. Pokoj byl čistý a v letním horku jsme velmi ocenili plně funkční klimatizaci. Moc se mi líbilo samotné prostředí hotelu, všude bylo krásně uklizeno, vkusná výzdoba a spousta živých květin. Snídaně byly jednoduše na jedničku. Personál byl milý, usměvavý a vždy ochotně se vším pomohl. Jediné, co by pobyt ještě dovedlo k dokonalosti, by byly papírové kapesníčky přímo na pokoji. Rádi se vrátíme a vřele doporučujeme.",
           "date": "2026-08"
+        },
+        {
+          "score": 10.0,
+          "negative": null,
+          "positive": "Pokoj moderně koncipován, interiér voněl, plně vybaven",
+          "date": "2026-08"
+        }
+      ],
+      "2026-09": [
+        {
+          "score": 10.0,
+          "negative": "Nic jsme nenašli.",
+          "positive": "Hned při vstupu do hotelu velmi ochotná recepční ,krásná vůně,ubytování čisté,pohodlné,2 mobilní klimatizace,minibar v ceně,oddělená koupelna a WC.\nRáno chutná snídaně.\nNic nám nechybělo.",
+          "date": "2026-09"
+        },
+        {
+          "score": 10.0,
+          "negative": null,
+          "positive": "Milé slečny recepční, útulný pokoj, vynikající snídaně:-)",
+          "date": "2026-09"
+        },
+        {
+          "score": 9.0,
+          "negative": "Ubral bych trochu na intenzitě vůně na pokoji, ale je to jen drobnost :-)",
+          "positive": "Pěkné ubytování nedaleko od centra, dostatečné a vkusné vybavení, bohatá nabídka snídaně, výborný poměr kvalita/cena",
+          "date": "2026-09"
+        },
+        {
+          "score": 9.0,
+          "negative": null,
+          "positive": "Ubytování bylo pohodlné, čisté, v klidné lokalitě, dostupné do centra. Parkovali jsme na ulici, jelikož na nás již na parkovišti hotelu nezbylo místo, ale ničemu to nevadilo - rezervovali jsme pokoj na poslední chvíli a dalo se to proto očekávat. Snídaně byla výborná, opravdu jsme si pochutnali. Celková cena za ubytování byla příznivá. Moc rádi se zde zase ubytujeme, pokud budeme mít cestu do Brna. Chtěla bych poděkovat skvělému personálu tohoto hotelu, který se podílel na tom, že jsme se zde cítili opravdu báječně.",
+          "date": "2026-09"
         }
       ]
     },
@@ -9450,6 +9846,12 @@
           "score": 5.0,
           "negative": "Veľmi chýbala klíma alebo aspoň ventilátor v tomto horúcom počasí. Boli sme nútení mať otvorené okno a aj vchodové dvere, tým pádom do bytu prenikal obrovský hluk z centra mesta a od veľmi hlučných ľudí z ulice.",
           "positive": "Ubytovanie zodpovedalo fotkám a nachádza blízko centra. Apartmán bol čistý a priestranný.",
+          "date": "2026-08"
+        },
+        {
+          "score": 8.0,
+          "negative": "Lokalita nepatří mezi nejlepší ve městě, jak jsme zjistili a lehce jsme bojovali s nalezením správného boxu s klíčky.",
+          "positive": "Dobře vybavený, především kuchyň, přístup na travnatý dvorek.",
           "date": "2026-08"
         }
       ]
